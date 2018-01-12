@@ -1,0 +1,51 @@
+@import ../mixins
+@import ../settings
+
+/*financial-overview*/
+
+.financial-overview
+	&-chart
+		height: $financial-overview-chart
+		padding: 50px 30px 30px 30px
+	&-item
+		height: ($financial-overview-chart/2) - $offsetCompact
+		padding: 40px 15px 15px
+		margin-bottom: 2*$offsetCompact
+		text-align: center
+
++max1199
+
+	.financial-overview
+		&-chart
+			height: $financial-overview-chart-max1199
+		&-item
+			padding-top: 18px
+			height: ($financial-overview-chart-max1199/2) - $offsetCompact
+
+
++max1023
+	
+	.financial-overview-chart
+		height: auto
+
++max639
+
+	.financial-overview
+		&-chart
+			width: 500px
+			padding: 15px
+		&-item
+			height: 130px
+
+
+
+
+
+
+
+
+
+
+
+
+		

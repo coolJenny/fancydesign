@@ -1,0 +1,554 @@
+@import settings
+
+// MIXINS
+
+// rounded corners
+=r($radius)
+	border-radius: $radius+px
+
+// rounded corners on top
+=rt($radius)
+	border-top-right-radius: $radius+px
+	border-top-left-radius: $radius+px
+
+// rounded corners on bottom
+=rb($radius)
+	border-bottom-right-radius: $radius+px
+	border-bottom-left-radius: $radius+px
+
+// HOVER AND FOCUS STATE
+=hf
+	&:hover, &:focus
+		@content
+
+// Hover
+=h
+	&:hover
+		@content
+
+// Focus
+=f
+	&:focus
+		@content
+
+
+
+// color and background classes
+=cbg($class, $color)
+	.text-#{$class}
+		color: $color !important
+
+	.bg-#{$class}
+		background-color: $color !important
+
+	a.text-#{$class}
+		+hf
+			color: $color !important
+
+// HOVER, FOCUS, ACTIVE (FOUNDATION)
+=hfa
+	& > a:hover,
+	& > a:focus,
+	&.is-active > a
+		@content
+
+=in
+	display: inline-block
+	vertical-align: top
+
+=md
+	display: inline-block
+	vertical-align: middle
+
+=ts($transition)
+	-webkit-transition: $transition
+	transition: $transition
+
+=ct
+	content: ''
+	display: block
+
+=linear($color1, $color2)
+	background: -webkit-linear-gradient($color1, $color2)
+	background: linear-gradient($color1, $color2)
+
+=linearLeft($color1, $color2)
+	background: -webkit-linear-gradient(left, $color1, $color2)
+	background: linear-gradient(to right, $color1, $color2)
+
+=linearRight($color1, $color2)
+	background: -webkit-linear-gradient(right, $color1, $color2)
+	background: linear-gradient(to left, $color1, $color2)
+
+=tf($value)
+	-webkit-transform: $value
+	-ms-transform: $value
+	transform: $value
+
+// MAIN TRANSITION EFFECT FOR CSS ANIMATIONS
+=tm
+	+ts(all $transition-time ease-out)
+
+
+// dots when text is longer than element
+=dots
+	display: block
+	max-width: 100%
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+
+=mxa
+	margin-right: auto
+	margin-left: auto
+
+// horizontally centered element
+=hc
+	display: block
+	margin-right: auto
+	margin-left: auto
+
+=act
+	&:active,
+	&.active
+		@content
+
+// all but not last
+=nl
+	&:not(:last-child)
+		@content
+
+// all but not first
+=nf
+	&:not(:first-child)
+		@content
+
+=l
+	*:last-child
+		@content
+
+=f
+	*:first-child
+		@content
+
+=abs
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+
+// BREAKPOINTS
+
+=min1600
+	@media print, screen and (min-width: 1600px)
+		@content
+	/*min-width: 1600px END*/
+
+=min1200
+	@media print, screen and (min-width: 1200px)
+		@content
+	/*min-width: 1200px END*/
+
+=min1024
+	@media print, screen and (min-width: 1024px)
+		@content
+	/*min-width: 1024px END*/
+
+=min992
+	@media print, screen and (min-width: 992px)
+		@content
+	/*min-width: 992px END*/	
+
+=min768
+	@media print, screen and (min-width: 768px)
+		@content
+	/*min-width: 768px END*/	
+
+=min640
+	@media print, screen and (min-width: 640px)
+		@content
+	/*min-width: 768px END*/	
+
+=min576
+	@media print, screen and (min-width: 576px)
+		@content
+	/*min-width: 768px END*/
+
+
+
+
+=max1199
+	@media print, screen and (max-width: 1199px)
+		@content
+	/*max-width: 1199pxEND*/
+
+=max1023
+	@media print, screen and (max-width: 1023px)
+		@content
+	/*max-width: 1199pxEND*/
+
+=max991
+	@media print, screen and (max-width: 991px)
+		@content
+	/*max-width: 991px END*/
+
+=max767
+	@media print, screen and (max-width: 767px)
+		@content
+	/*max-width: 767px END*/
+
+=max639
+	@media print, screen and (max-width: 639px)
+		@content
+	/*max-width: 639px END*/
+
+=max575
+	@media print, screen and (max-width: 575px)
+		@content
+	/*max-width: 575px END*/
+
+
+
+
+=min768-max991
+	@media print, screen and (min-width: 768px) and (max-width: 991px)
+		@content
+	/*(min-width: 768px) and (max-width: 991px) END*/
+
+=min640-max1023
+	@media print, screen and (min-width: 640px) and (max-width: 1023px)
+		@content
+	/*(min-width: 640px) and (max-width: 1023px) END*/
+
+
+
+
+// selected text properties
+=selection($color)
+	::moz-selection
+	    background: $color
+
+	::selection
+	    background: $color
+
+=cl
+	&:before,
+	&:after
+		+ct
+		clear: both
+
+=z($number)
+	
+	@for $i from 1 through $number
+		.z#{$i}
+			z-index: $i
+
+=rem($fontSize)
+	/*#{$fontSize}px*/
+	font-size: ($fontSize/$fontSizeBase) + rem
+
+=remXl($fontSize)
+	/*#{$fontSize}px*/
+	font-size: ($fontSize/$fontSizeBaseXl) + rem
+
+=remPhone($fontSize)
+	/*#{$fontSize}px*/
+	font-size: ($fontSize/$fontSizeBasePhone) + rem
+
+=radial($color1, $color2)
+	background-image: $color2
+	background-image: -webkit-radial-gradient($color1, $color2)
+	background-image: radial-gradient($color1, $color2)
+
+=keys($name)
+	@-webkit-keyframes #{$name}
+		@content
+
+	@keyframes #{$name}
+		@content
+
+=anim($value)
+	-webkit-animation: $value
+	animation: $value
+
+=ns
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+=nw
+	white-space: nowrap
+
+=appearNone
+	-webkit-appearance: none
+	appearance: none
+
+
+
+// BUTTONS
+// BOOTSTRAP REGULAR BUTTON
+=btn($name, $color, $bgColor)
+
+	.btn-#{$name}
+		color: $color
+		background-color: $bgColor
+		border-color: $bgColor
+
+	.btn-#{$name}:hover
+		color: $color
+		background-color: darken($bgColor, 7%)
+		border-color: darken($bgColor, 7%)
+
+	.btn-#{$name}:focus,
+	.btn-#{$name}.focus,
+	.btn-#{$name}:active,
+	.btn-#{$name}.active,
+	.open > .btn-#{$name}.dropdown-toggle,
+	.btn-#{$name}:active:hover,
+	.btn-#{$name}:active:focus,
+	.btn-#{$name}:active.focus,
+	.btn-#{$name}.active:hover,
+	.btn-#{$name}.active:focus,
+	.btn-#{$name}.active.focus,
+	.open > .btn-#{$name}.dropdown-toggle:hover,
+	.open > .btn-#{$name}.dropdown-toggle:focus,
+	.open > .btn-#{$name}.dropdown-toggle.focus
+		color: $color
+		background-color: darken($bgColor, 15%)
+		border-color: darken($bgColor, 15%)
+
+	.btn-#{$name}.disabled:focus,
+	.btn-#{$name}.disabled.focus,
+	.btn-#{$name}:disabled:focus,
+	.btn-#{$name}:disabled.focus
+		background-color: $bgColor
+		border-color: $bgColor
+
+	.btn-#{$name}.disabled:hover,
+	.btn-#{$name}:disabled:hover
+		background-color: $bgColor
+		border-color: $bgColor
+
+// BOOTSTRAP OUTLINE BUTTON
+=btnOutline($name, $color, $hoverColor)
+	
+	.btn-outline-#{$name}
+		color: $color
+		background-image: none
+		background-color: transparent
+		border-color: $color
+
+	.btn-outline-#{$name}:hover
+		color: $hoverColor
+		background-color: transparent
+		border-color: $hoverColor
+
+	.btn-outline-#{$name}:focus,
+	.btn-outline-#{$name}.focus
+		color: $hoverColor
+		background-color: transparent
+		border-color: $hoverColor
+
+	.btn-outline-#{$name}:active,
+	.btn-outline-#{$name}.active,
+	.open > .btn-outline-#{$name}.dropdown-toggle
+		color: $hoverColor
+		background-color: transparent
+		border-color: $hoverColor
+
+	.btn-outline-#{$name}:active:hover,
+	.btn-outline-#{$name}:active:focus,
+	.btn-outline-#{$name}:active.focus,
+	.btn-outline-#{$name}.active:hover,
+	.btn-outline-#{$name}.active:focus,
+	.btn-outline-#{$name}.active.focus,
+	.open > .btn-outline-#{$name}.dropdown-toggle:hover,
+	.open > .btn-outline-#{$name}.dropdown-toggle:focus,
+	.open > .btn-outline-#{$name}.dropdown-toggle.focus
+		color: darken($hoverColor, 5%)
+		background-color: transparent
+		border-color: darken($hoverColor, 5%)
+
+	.btn-outline-#{$name}.disabled:focus,
+	.btn-outline-#{$name}.disabled.focus,
+	.btn-outline-#{$name}:disabled:focus,
+	.btn-outline-#{$name}:disabled.focus
+		border-color: lighten($color, 5%)
+
+	.btn-outline-#{$name}.disabled:hover,
+	.btn-outline-#{$name}:disabled:hover
+		border-color: lighten($color, 5%)
+
+
+
+// Zurb Foundation btn regular
+=foundationBtnDefault($background-color, $color)
+	
+	.button
+		background-color: $background-color
+		color: $color
+		+hf
+			background-color: darken($background-color, 5%)
+			color: $color
+
+// Zurb Foundation btn regular
+=foundationBtn($class, $background-color, $color)
+	
+	.button.#{$class}
+		background-color: $background-color
+		color: $color
+		+hf
+			background-color: darken($background-color, 5%)
+			color: $color
+
+
+// Zurb Foundation btn hollow (outline)
+=foundationBtnHollow($class, $border-color, $color)
+
+	.button.hollow.#{$class}
+		border: 1px solid $border-color
+		color: $color
+		+hf
+			background-color: darken($border-color, 5%)
+			border-color: darken($border-color, 5%)
+			color: #fff
+
+// Zurb Foundation btn hollow (outline) default
+=foundationBtnHollowDefault($class, $border-color, $color)
+
+	.button.hollow
+		border: 1px solid $border-color
+		color: $color
+		+hf
+			background-color: darken($border-color, 5%)
+			border-color: darken($border-color, 5%)
+			color: #fff
+
+
+// Zurb Foundation btn disabled
+=foundationBtnDisabled($class, $background-color, $color)
+
+	.button
+		&.disabled,
+		&[disabled]
+			&.#{class},
+			&.#{class}:hover,
+			&.#{class}:focus
+				background-color: $background-color
+				color: $color
+
+
+// Disabled All		
+=foundationBtnDisabled($background-color, $border-color, $color)
+	.button.disabled,
+	.button[disabled]
+		&,
+		&.primary,
+		&.secondary,
+		&.success,
+		&.alert,
+		&.warning
+			&,
+			&:hover,
+			&:focus
+				background-color: $background-color
+				border-color: $border-color
+				color: $color
+				opacity: 1
+				
+// Foundation Columns
+=custom-columns($class, $quantity)
+	@for $i from 1 through $quantity
+		.#{$class}-#{$i}
+			width: 100/($quantity/$i)+%
+
+
+=column-centered($class)
+	.#{$class}-centered,
+	.#{$class}-centered:last-child:not(:first-child)
+		float: none
+		clear: both
+
+	.#{$class}-centered
+		+mxa
+	
+=column-uncentered($class)
+	.#{$class}-uncentered,
+	.#{$class}-uncentered:last-child:not(:first-child)
+		position: static
+		float: left
+		margin-left: 0
+		margin-right: 0
+		clear: none
+
+
+// placeholder
+=ph($color)
+	input,
+	textarea
+		&::-webkit-input-placeholder
+			color: $color
+		&::-moz-placeholder
+			color: $color
+		&:-ms-input-placeholder
+			color: $color
+		&::placeholder
+			color: $color	
+
+// crossbrowser font mixin
+=font($pathName, $family, $weight, $style)
+	@font-face
+		font-family: $family
+		src: url("../fonts/" + $pathName + ".eot?#iefix") format("embedded-opentype"),  url("../fonts/" + $pathName + ".woff") format("woff"), url("../fonts/" + $pathName + ".ttf")  format("truetype"), url("../fonts/" + $pathName + ".svg#" + $pathName) format("svg")
+		font-weight: $weight
+		font-style: $style
+
+=a
+	&:after
+		@content
+
+=b
+	&:before
+		@content
+
+=titles-color-inherit
+	&
+		h1, h2, h3, h4, h5, h6
+			color: inherit
+
+=p($value)
+	padding: $value
+
+=px($value)
+	padding-right: $value
+	padding-left: $value
+
+=py($value)
+	padding-top: $value
+	padding-bottom: $value
+	
+=m($value)
+	margin: $value
+	
+=mx($value)
+	margin-right: $value
+	margin-left: $value
+
+=my($value)
+	margin-top: $value
+	margin-bottom: $value
+
+=outline
+	&:focus
+		outline: $border 1px dotted
+
+
+
+
+
+
+
+	

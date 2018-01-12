@@ -1,0 +1,183 @@
+include _mixins.pug
+
+doctype html
+// propertypage.pug begin
+html(lang='zxx')
+	+head
+	body
+
+		+header
+
+		.main.box-blue
+
+			.section.property-item-expanded-propertypage
+				.section-header
+					.row
+
+						.column.xlarge-5.large-6.xmedium-6.medium-8.property-item-header-column
+							+property-item-header-big
+
+						.column.xlarge-4.large-5.xmedium-6.medium-8.property-item-header-column
+							.property-item-invest-watch.section
+								a(href="#").button.expanded Invest In This Property
+								.property-watch-social
+									.property-watch
+										a(href="#0").button.hollow.secondary.small(data-toggler-itself="is-active")
+											img(src="img/template/heart-gray.png", alt="", width="15").icon-left
+											span.button-text-normal Watch
+											span.button-text-active Watching
+										p.property-watch-text 236 Watching
+									+social-list
+				
+				.row
+					.column
+			
+						.property-item-expanded.box-white.js-property-slider-thumbnails-parent.section
+							.row
+								.column.large-5.large-push-7.xmedium-9.medium-10.slider-column-translated
+									.property-item-expanded-caption
+										.property-item-progress
+											.property-item-points
+												b.text-green 22 points 
+												| available, 
+												b.text-green $560 
+												| per point
+											+progressbar(85)
+											+property-item-progress-values
+										
+										.property-item-body
+											+property-item-characteristics
+
+								.column.large-7.large-pull-5.slider-column-translated
+									+property-slider
+
+								.column
+									+property-slider-thumbnails
+
+							
+			+financial-overview
+
+			
+			.section
+
+				.row
+					.column
+
+						.section.box-white
+
+							.tabs-set
+
+								ul.tabs.box-padding-side#tabs-1(data-tabs)
+									li.tabs-title.is-active
+										a(href='#tabs-panel-1') Property Info
+									li.tabs-title.property-tabs-title
+										a(href='#tabs-panel-2') ROI Calculator 
+									li.tabs-title.property-tabs-title
+										a(href='#tabs-panel-3') Board of Investors
+
+								.tabs-content(data-tabs-content='tabs-1')
+									.tabs-panel.box-padding-side.section.is-active#tabs-panel-1
+										h4 Morbi suscipit neque mi, ac placerat sem suscipit laoreet
+										p Sed sed rutrum massa. Cras tempus dignissim porta. Morbi vel odio leo. Pellentesque tincidunt nulla neque, nec porta ipsum egestas quis. Curabitur non luctus dolor, eu dignissim lorem. Curabitur velit ipsum, volutpat vel odio ac, efficitur semper ante. Duis a lobortis eros.
+										p Proin laoreet turpis non ultricies sagittis. Phasellus interdum porttitor erat sit amet euismod. Nam tempus dolor sit amet magna dapibus egestas. Donec ultrices erat sit amet metus aliquet, sit amet posuere ex efficitur. Fusce ullamcorper rutrum metus. Fusce accumsan in odio nec tincidunt.
+										ul
+											li Morbi ac ligula a enim
+											li Luctus malesuada pellentesque pulvinar venenatis
+											li Nam odio neque, bibendum et consequat
+											li Euismod nec purus, suspendisse feugiat tincidunt pretium
+
+									.tabs-panel.box-padding-side.section#tabs-panel-2
+										h4 Tabs Panel 2
+										p Sed sed rutrum massa. Cras tempus dignissim porta. Morbi vel odio leo. Pellentesque tincidunt nulla neque, nec porta ipsum egestas quis. Curabitur non luctus dolor, eu dignissim lorem. Curabitur velit ipsum, volutpat vel odio ac, efficitur semper ante. Duis a lobortis eros.
+										p Proin laoreet turpis non ultricies sagittis. Phasellus interdum porttitor erat sit amet euismod. Nam tempus dolor sit amet magna dapibus egestas. Donec ultrices erat sit amet metus aliquet, sit amet posuere ex efficitur. Fusce ullamcorper rutrum metus. Fusce accumsan in odio nec tincidunt.
+										ul
+											li Morbi ac ligula a enim
+											li Luctus malesuada pellentesque pulvinar venenatis
+											li Nam odio neque, bibendum et consequat
+											li Euismod nec purus, suspendisse feugiat tincidunt pretium
+
+									.tabs-panel.box-padding-side.section#tabs-panel-3
+										h4 Tabs Panel 3
+										p Sed sed rutrum massa. Cras tempus dignissim porta. Morbi vel odio leo. Pellentesque tincidunt nulla neque, nec porta ipsum egestas quis. Curabitur non luctus dolor, eu dignissim lorem. Curabitur velit ipsum, volutpat vel odio ac, efficitur semper ante. Duis a lobortis eros.
+										p Proin laoreet turpis non ultricies sagittis. Phasellus interdum porttitor erat sit amet euismod. Nam tempus dolor sit amet magna dapibus egestas. Donec ultrices erat sit amet metus aliquet, sit amet posuere ex efficitur. Fusce ullamcorper rutrum metus. Fusce accumsan in odio nec tincidunt.
+										ul
+											li Morbi ac ligula a enim
+											li Luctus malesuada pellentesque pulvinar venenatis
+											li Nam odio neque, bibendum et consequat
+											li Euismod nec purus, suspendisse feugiat tincidunt pretium
+
+			.section
+				.row
+					.column.xlarge-9.large-8
+						.section
+							h3.section-title Public Comments
+
+							.box-white.box-padding
+
+								.section
+
+									form.comments-form
+										textarea(placeholder="Any thoughts? Share it with us here!")
+										.text-right
+											button(type="submit").button.xregular Submit
+
+									.comments-container
+										.row
+											.column.float-right
+												+comment(
+													"photo-1.jpg",
+													"John Doe",
+													"Aliquam nisl felis, auctor id facilisis eget, venenatis non ante. Sed pellentesque ante imperdiet diam hendrerit, ut venenatis lacus imperdiet. Donec sit amet diam at nulla interdum sagittis bibendum ut arcu. Morbi accumsan dictum aliquet. Curabitur eros ligula, bibendum sit amet facilisis at, placerat eget augue."
+												)
+											.column.float-right.medium-11
+												// change widht of comment via .column-...
+												+comment(
+													"photo-2.jpg",
+													"Michael Kane",
+													"Aliquam nisl felis, auctor id facilisis eget, venenatis non ante. Sed pellentesque ante imperdiet diam hendrerit, ut venenatis lacus imperdiet. Donec sit amet diam at nulla interdum sagittis bibendum ut arcu. Morbi accumsan dictum aliquet. Curabitur eros ligula, bibendum sit amet facilisis at, placerat eget augue."
+												)
+											.column.float-right
+												+comment(
+													"photo-3.jpg",
+													"Jessica McKensey",
+													"Aliquam nisl felis, auctor id facilisis eget, venenatis non ante. Sed pellentesque ante imperdiet diam hendrerit, ut venenatis lacus imperdiet. Donec sit amet diam at nulla interdum sagittis bibendum ut arcu. Morbi accumsan dictum aliquet. Curabitur eros ligula, bibendum sit amet facilisis at, placerat eget augue."
+												)
+									+load-more
+
+
+					.column.xlarge-3.large-4
+						.section
+							h3.section-title Additional Documents
+
+							.box-white
+
+								ul.documents-list
+									li
+										+document-preview(
+											"folders.png",
+											30,
+											"Documents #4511",
+											"Sed vulputate sodales lacus, in ullamcorper neque ulla sed."
+										)
+									li
+										+document-preview(
+											"video.png",
+											29,
+											"Video of property",
+											"Vestibulum, at interdum tortor lorem lobortis."
+										)
+									li
+										+document-preview(
+											"photo.png",
+											29,
+											"All photos in RAR",
+											"Quis nibh viverra, egestas magna eget, consequat nisi."
+										)
+
+
+		+create-account-contact-us
+
+		+footer
+		+scripts
+		
+	// propertypage.pug end

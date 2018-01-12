@@ -1,0 +1,412 @@
+@import ../mixins
+@import ../settings
+
+/*property-item*/
+
+.property-item
+	padding-top: 30px
+	margin-bottom: 50px
+	padding-bottom: 20px
+	&-header
+		font-weight: 400
+	&-container
+		padding-right: 28px
+		padding-left: 28px
+	&-price
+		margin-bottom: 12px
+		+cl
+		+nw
+		&-main
+			position: relative
+			+md
+			margin-bottom: 0
+			padding-right: 23px
+			color: $primary-blue
+		&-rent
+			float: right
+			position: relative
+			display: inline-block
+			vertical-align: top
+			padding-left: 23px
+			border-left: $border 1px solid
+			&-label
+				+rem(11)
+			&-value
+				margin-bottom: 0
+				color: $primary-blue
+				font-weight: 400
+	&-address,
+	&-info
+		margin-bottom: 15px
+	&-address
+		position: relative
+		padding-left: 20px
+		font-style: normal
+		&-icon
+			position: absolute
+			top: 5px
+			left: 0
+			z-index: 1
+	&-info
+	&-img
+		&-container
+			position: relative
+			min-height: 200px
+			margin-bottom: 30px
+		&-content
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: 1
+			background-color: rgba(0, 0, 0, 0.2)
+			&:before
+				+ct
+				position: absolute
+				right: 0
+				bottom: 0
+				left: 0
+				z-index: 1
+				height: 50%
+				+linear(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7))
+		&-footer
+			position: absolute
+			bottom: 0
+			width: 100%
+			z-index: 2
+			color: #fff
+			p
+				margin-bottom: 0
+			&-rooms,
+			&-foots
+				position: absolute
+				bottom: 0
+				z-index: 1
+				padding-bottom: 15px
+			&-rooms
+				left: 0
+			&-foots
+				right: 0
+				text-align: right
+	&-characteristics
+		border-radius: 7px
+		border: 1px solid #dee4e8
+		padding: 23px 52px 14px
+		margin-bottom: 30px
+		&-row
+		&-label
+			margin-top: 10px
+			+rem(13)
+			font-weight: 700
+			text-transform: uppercase
+		&-value
+
+	&-progress
+		margin-bottom: 10px
+		&-values
+			+nw
+	&-invest-watch
+		margin-top: 7px
+	&-invest
+	&-points
+		margin-bottom: 4px
+
+.progress-value
+	&-container
+		+in
+		margin-bottom: 15px
+		min-width: 55px
+		+nl
+			margin-right: 15px
+		+l
+			margin-bottom: 0
+	&
+		margin-bottom: 0
+	&-caption
+		+rem(10)
+		font-weight: 700
+		text-transform: uppercase
+
+.progressbar
+	position: relative
+	height: 6px
+	border-radius: 4px
+	margin-bottom: 8px
+	background-color: #e4eaef
+	&-fill
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		z-index: 1
+		background-color: $primary
+		border-radius: inherit
+
+.favorite-heart
+	position: absolute
+	top: 20px
+	right: 20px
+	z-index: 3
+	display: inline-block
+	width: 40px
+	height: 40px
+	padding: 6px
+	cursor: pointer
+	&-icon
+		&-normal,
+		&-active
+			display: block
+			width: 28px
+			+tm
+		&-normal
+		&-active
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index: 1
+			margin-top: -14px
+			margin-left: -14px
+			opacity: 0
+	&.is-active,
+	&:hover,
+	&:focus
+		.favorite-heart-icon
+			&-normal
+				opacity: 0
+			&-active
+				opacity: 1
+
+
+.property-item-expanded
+	margin-left: 30px
+	&-caption
+		padding-top: 47px
+		padding-bottom: 20px
+	.property-item-price-rent
+		float: none
+		margin-top: 6px
+	&-propertypage
+		.property-item-header
+			padding-top: 0
+
+.property-slider
+	min-height: 400px
+	&-container
+		position: relative
+		margin-bottom: $mb-half
+		background-color: #d3d3d3
+		border-radius: 10px
+		overflow: hidden
+		.lSSlideOuter
+			position: relative
+			z-index: 1
+	&-item
+		>img
+			display: block
+			+hc
+	&-thumbnails
+		&-container
+			margin-right: 15px
+			margin-left: 15px
+			margin-bottom: 15px
+			.lSSlideOuter
+				border-radius: 7px
+		&-item
+			position: relative
+			width: 108px
+			height: 108px
+			border-radius: 7px
+			overflow: hidden
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				+tf(translate(-50%, -50%))
+				z-index: 1
+				height: 100%
+				display: block
+				width: auto
+				max-width: none
+				border-radius: inherit
+
+.slider-column-translated
+	+tf(translateX(-30px))
+	&-content
+		margin-left: 60px
+		margin-right: 30px
+
+.property-watch
+	+md
+	&-social
+		+nw
+		.social-list
+			float: right
+	&-text
+		margin-bottom: 0
+		+md
+		margin-left: 15px
+	.button
+		margin-bottom: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++max1199
+	
+	.property-item
+		&-price
+			&-main
+				padding-right: 13px
+			&-rent
+				padding-left: 13px
+		
+		&-expanded
+			&-caption
+				padding-top: 30px
+				padding-bottom: 20px
+				&-container
+					+px(0)
+
+
++max1023
+	
+	.property-item
+		&-expanded
+			&-caption
+				padding-bottom: 0
+		&-characteristics
+			+px(30px)
+		&-header-column
+			// margin-left: 30px
+			// float: left !important
+
+	.property-slider
+		min-height: 1px
+
+	.slider-column-translated-content,
+	.property-item-expanded-caption,
+	.slider-column-translated .property-item-footer
+		margin-left: 60px
+
+
+	.slider-column-translated-content,
+	.property-item-expanded-caption
+		margin-right: 30px
+	
+	.progress
+		&-values
+		&-value
+			&-container
+	
+	.property-watch
+		.button
+			margin-bottom: 4px
+		&-text
+			display: block
+			margin-left: 0
+			text-align: center
+
++max639
+
+	.slider-column-translated
+		+tf(none)
+
+	.slider-column-translated-content,
+	.property-item-expanded-caption,
+	.slider-column-translated .property-item-footer
+		margin-left: 0
+
+	.slider-column-translated-content,
+	.property-item-expanded-caption
+		margin-right: 0
+
+	.slider-column-translated-content
+		padding-right: 15px
+		padding-left: 15px
+
+	.property-item
+		padding-top: 15px
+		margin-bottom: $mb
+		&-expanded
+			padding-bottom: 15px
+			margin-left: 0
+			&-caption
+				padding-top: 15px
+				padding-right: 15px
+				padding-left: 15px
+			.property-item-price-rent
+				margin-top: 0
+		&-characteristics
+			padding-top: 15px
+			padding-bottom: 15px
+			padding-right: 15px
+			padding-left: 15px
+			&-label
+				margin-top: 5px
+		&-footer
+			padding-right: 15px
+			padding-left: 15px
+		&-container
+			padding-right: 15px
+			padding-left: 15px
+		&-img-container
+			min-height: 150px
+
+	.property-slider
+		&-container
+			border-radius: 0
+
+	.favorite-heart
+		top: 10px
+		right: 10px
+
+	.progress-value
+		&-container
+			+nl
+				margin-right: 8px
+			+l
+				margin-bottom: 0
+
+	.property-slider
+		&-thumbnails-container
+			display: none
+		&-container
+			margin-bottom: -15px
+			+rb(7)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

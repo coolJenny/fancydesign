@@ -1,0 +1,88 @@
+/*Grid*/
+
+.row 
+	max-width: $container + 2*$offset
+	.row
+		margin-right: -$offset
+		margin-left: -$offset
+
+.column,
+.columns
+	padding-right: $offset
+	padding-left: $offset
+
+.row-compact
+	.column,
+	.columns
+		padding-right: $offsetCompact
+		padding-left: $offsetCompact
+
+.row
+	.row-compact
+		margin-right: -$offsetCompact
+		margin-left: -$offsetCompact
+
+
++min768
+
+	+custom-columns("xmedium", 12)
+	+column-centered("xmedium")
+	+column-uncentered("xmedium")
+
+
++min1024
+
+	+custom-columns("large", 12)
+
+
++min1200
+
+	+custom-columns("xlarge", 12)
+	+column-centered("xlarge")
+
+	/*custom column*/
+	.xlarge
+		&-37
+			width: 37%
+		&-63
+			width: 63%
+
+	+column-uncentered("xlarge")
+
++min640
+
+	.medium-float-right
+		float: right
+
+	.medium-float-none
+		float: none
+		
+
++min1024
+
+	.large-float-right
+		float: right
+
+	.large-float-none
+		float: none
+
++max639
+
+	.row
+		max-width: 500px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

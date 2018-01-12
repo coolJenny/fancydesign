@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!-- document-vault.pug begin-->
+<html lang="zxx">
+  <!-- mixin head begin-->
+  <head>
+    <!-- Meta-->
+    <meta charset="utf-8"/>
+    <!-- Title-->
+    <title>BitREI</title>
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=3.0, user-scalable=yes"/>
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"/>
+    <!-- Framework-->
+    <link rel="stylesheet" href="foundation/foundation.min.css"/>
+    <!-- Slider-->
+    <link rel="stylesheet" href="lightslider/lightslider.css"/>
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/global/global.css"/>
+    <link rel="stylesheet" href="css/components/advantages.css"/>
+    <link rel="stylesheet" href="css/components/choose.css"/>
+    <link rel="stylesheet" href="css/components/comments.css"/>
+    <link rel="stylesheet" href="css/components/documents.css"/>
+    <link rel="stylesheet" href="css/components/featured-in.css"/>
+    <link rel="stylesheet" href="css/components/filters.css"/>
+    <link rel="stylesheet" href="css/components/financial-overview.css"/>
+    <link rel="stylesheet" href="css/components/footer.css"/>
+    <link rel="stylesheet" href="css/components/header.css"/>
+    <link rel="stylesheet" href="css/components/hero.css"/>
+    <link rel="stylesheet" href="css/components/page-nav.css"/>
+    <link rel="stylesheet" href="css/components/profile-menu.css"/>
+    <link rel="stylesheet" href="css/components/profile.css"/>
+    <link rel="stylesheet" href="css/components/property-item.css"/>
+    <link rel="stylesheet" href="css/components/slider.css"/>
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/manifest.json"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="theme-color" content="#ffffff"/>
+  </head>
+  <!-- mixin head end-->
+  <body>
+    <!-- mixin header begin-->
+    <header class="header">
+      <div class="row">
+        <div class="column large-2">
+          <div class="row">
+            <div class="column large-12 small-6">
+              <!-- mixin header-logo begin--><a class="header-logo" href="home.html"><img src="img/template/header-logo.png" width="105" alt=""/></a>
+              <!-- mixin header-logo end-->
+            </div>
+            <div class="column small-6">
+              <!-- mixin header-menu-button begin-->
+              <!-- Menu button-->
+              <div class="menu-icon-container clearfix" data-responsive-toggle="header-menu" data-hide-for="large" data-toggle="header">
+                <button class="menu-icon" type="button" data-toggle="header-menu"></button>
+              </div>
+              <!-- mixin header-menu-button end-->
+            </div>
+          </div>
+        </div>
+        <div class="column large-10">
+          <!-- Collapsible Menu-->
+          <div class="header-menu-collapsible" id="header-menu">
+            <div class="row">
+              <div class="column large-8">
+                <!-- mixin header-menu-main begin-->
+                <div class="menu-centered">
+                  <ul class="header-menu menu dropdown" data-dropdown-menu="data-dropdown-menu" data-click-open="true">
+                    <li><a href="#">Buy Properties</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Knowledge</a>
+                      <ul class="menu">
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- mixin header-menu-main end-->
+              </div>
+              <div class="column large-4">
+                <!-- mixin header-menu-unlogged begin-->
+                <div class="header-menu-unlogged-container"><a class="header-menu-user-item button hollow on-dark tiny" href="login-create-account.html">SIGN UP</a><span class="header-menu-user-item">or</span><a class="header-menu-user-item header-menu-user-link-login" href="login-create-account.html">login</a></div>
+                <!-- mixin header-menu-unlogged end-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- mixin header end-->
+    <!-- mixin page-nav begin-->
+    <!-- Collapsible Menu-->
+    <div class="page-nav">
+      <div class="row">
+        <div class="column">
+          <!-- Menu button-->
+          <div class="menu-icon-container clearfix" data-responsive-toggle="page-nav-menu" data-hide-for="large">
+            <button class="menu-icon inverse" type="button" data-toggle="page-nav-menu"></button>
+          </div>
+          <ul class="menu page-nav-menu dropdown" id="page-nav-menu" data-dropdown-menu="data-dropdown-menu" data-click-open="true">
+            <li><a href="portfolios.html">Portfolios</a></li>
+            <li><a href="watchlist.html">Watch List</a></li>
+            <li><a href="transaction-history.html">Transaction History</a></li>
+            <li class="is-active"><a href="document-vault.html">Document Vault</a></li>
+            <li><a href="#">Profile<img class="icon-right" src="img/template/arrow-down.png" alt="" width="8"/></a>
+              <ul class="menu">
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="password-reset.html">Password Reset</a></li>
+                <li><a href="permissions.html">Permissions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- mixin page-nav end-->
+    <main class="box-blue">
+      <div class="row">
+        <div class="column">
+          <div class="section box-shadow box-padding">
+            <h3 class="section-title">Document Vault</h3>
+            <form>
+              <div class="row">
+                <div class="column large-4 medium-6">
+                  <div class="section">
+                    <h5 class="text-blue">Select 1 or multiple properties</h5>
+                    <ul class="select-multiple menu vertical">
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">123 E Main St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">225 Downing St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">12 Beth St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">123 E Main St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">225 Downing St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">12 Beth St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">123 E Main St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">225 Downing St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">12 Beth St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">123 E Main St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">225 Downing St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">12 Beth St., Orlando, FL 32814</li>
+                      <!--  mixin select-multiple-item end-->
+                    </ul>
+                  </div>
+                </div>
+                <div class="column large-4 medium-6">
+                  <div class="section">
+                    <h5 class="text-blue">Select 1 or multiple document types</h5>
+                    <ul class="select-multiple menu vertical">
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Appriasals</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Quarterly P&amp;L</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Quarterly Expense Report</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Account Overview</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Tax Documents</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Titles</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Ownership Contracts</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Other</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Quarterly Expense Report</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Account Overview</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Tax Documents</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Titles</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Quarterly Expense Report</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Account Overview</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Tax Documents</li>
+                      <!--  mixin select-multiple-item end-->
+                      <!--  mixin select-multiple-item begin-->
+                      <li data-toggler-itself="is-active">Titles</li>
+                      <!--  mixin select-multiple-item end-->
+                    </ul>
+                  </div>
+                </div>
+                <div class="column large-4 medium-12">
+                  <div class="section">
+                    <div class="text-center">
+                      <h5 class="text-blue">Filter by date (if applicable)</h5>
+                      <div class="filters-form vertical horizontal-medium-down filters-form-table">
+                        <input class="filters-form-item input-rounded" type="search" placeholder="01/01/2017">
+                        <label class="filters-form-item filters-label">TO</label>
+                        <input class="filters-form-item input-rounded" type="search" placeholder="31/03/2017">
+                      </div>
+                      <input class="button xregular" type="submit" value="Search">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="section box-shadow box-padding">
+            <h3 class="section-title">Search Results:</h3>
+            <div class="table-column">
+              <div class="table-scroll">
+                <table class="unstriped hover">
+                  <thead>
+                    <tr>
+                      <th>Date Issued</th>
+                      <th>Property Address</th>
+                      <th>Document Type</th>
+                      <th>Description</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01/14/2016</td>
+                      <td>123 E Main St., Orlando, FL 32814</td>
+                      <td>Quarterly P&L Statement</td>
+                      <td>2017 Q2</td>
+                      <td>
+                        <!-- mixin dropdown-options begin-->
+                        <ul class="menu dropdown dropdown-options" data-dropdown-menu="data-dropdown-menu" data-click-open="true" data-close-on-click-inside="false" data-disable-hover="true">
+                          <li><a href="#">Download options</a>
+                            <ul class="menu">
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-1"/>
+                                  <label for="checkbox-1">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-2"/>
+                                  <label for="checkbox-2">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-3"/>
+                                  <label for="checkbox-3">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-4"/>
+                                  <label for="checkbox-4">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <!-- mixin dropdown-options end-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01/13/2016</td>
+                      <td>225 Downing St., Orlando, FL 32814</td>
+                      <td>Quarterly Expense Report</td>
+                      <td>2017 Q2</td>
+                      <td>
+                        <!-- mixin dropdown-options begin-->
+                        <ul class="menu dropdown dropdown-options" data-dropdown-menu="data-dropdown-menu" data-click-open="true" data-close-on-click-inside="false" data-disable-hover="true">
+                          <li><a href="#">Download options</a>
+                            <ul class="menu">
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-5"/>
+                                  <label for="checkbox-5">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-6"/>
+                                  <label for="checkbox-6">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-7"/>
+                                  <label for="checkbox-7">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-8"/>
+                                  <label for="checkbox-8">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <!-- mixin dropdown-options end-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01/13/2016</td>
+                      <td>12 Beth St., Orlando, FL 32814</td>
+                      <td>Account Overview</td>
+                      <td>2017 Q2</td>
+                      <td>
+                        <!-- mixin dropdown-options begin-->
+                        <ul class="menu dropdown dropdown-options" data-dropdown-menu="data-dropdown-menu" data-click-open="true" data-close-on-click-inside="false" data-disable-hover="true">
+                          <li><a href="#">Download options</a>
+                            <ul class="menu">
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-9"/>
+                                  <label for="checkbox-9">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-10"/>
+                                  <label for="checkbox-10">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-11"/>
+                                  <label for="checkbox-11">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-12"/>
+                                  <label for="checkbox-12">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <!-- mixin dropdown-options end-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01/13/2016</td>
+                      <td>91 Mark’s St., Orlando, FL 32814</td>
+                      <td>Title</td>
+                      <td>Executed Title</td>
+                      <td>
+                        <!-- mixin dropdown-options begin-->
+                        <ul class="menu dropdown dropdown-options" data-dropdown-menu="data-dropdown-menu" data-click-open="true" data-close-on-click-inside="false" data-disable-hover="true">
+                          <li><a href="#">Download options</a>
+                            <ul class="menu">
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-13"/>
+                                  <label for="checkbox-13">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-14"/>
+                                  <label for="checkbox-14">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-15"/>
+                                  <label for="checkbox-15">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                              <li>
+                                <!--  mixin checkbox begin-->
+                                <div class="checkbox">
+                                  <input type="checkbox" id="checkbox-16"/>
+                                  <label for="checkbox-16">Option</label>
+                                </div>
+                                <!--  mixin checkbox end-->
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <!-- mixin dropdown-options end-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- mixin table-controls begin-->
+              <div class="table-controls"><a class="button hollow disabled" href="#0">Prev</a><a class="button hollow" href="#0">Next</a></div>
+              <!-- mixin table-controls end-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- mixin footer begin-->
+    <footer class="footer">
+      <div class="footer-nav">
+        <div class="row">
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">QUICK MENU</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">Buy Properties</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Knowledge</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">HELP</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Our History</a></li>
+                  <li><a href="#">Ranking of properties</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">USER menu</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">Pellentesque leo</a></li>
+                  <li><a href="#">Etiam orci</a></li>
+                  <li><a href="#">Quis consequat et</a></li>
+                  <li><a href="#">Nunc pharetra interdum</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3">
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">about us</h6>
+              <div class="footer-nav-item-body">
+                <p>Donec tempor pellentesque risus, eget pharetra augue tristique rhoncus. Praesent nec felis arc.</p>
+                <p>Donec rhoncus nec justo nec finibus. Mauris aliquam metus dolor, vel placerat dolor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-main">
+        <div class="row">
+          <div class="column">
+            <div class="footer-main-header">
+              <div class="row">
+                <div class="column small-6"><a class="footer-logo" href="home.html"><img src="img/template/footer-logo.png" alt="" width="82"/></a></div>
+                <div class="column small-6">
+                  <div class="footer-social-login">
+                    <!-- social-list mixin begin-->
+                    <ul class="menu social-list">
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/facebook.png" width="9" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/twitter.png" width="17" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/linkedin.png" width="18" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                    </ul>
+                    <!-- social-list mixin end-->
+                    <!-- hidden for small - it is represented in header--><a class="button tiny footer-btn hide-for-small-only" href="login-create-account.html">Login</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-main-text">
+              <div class="row">
+                <div class="column large-2">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only,</p>
+                </div>
+                <div class="column large-8">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances. This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances. This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances.</p>
+                </div>
+                <div class="column large-2">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only,</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- mixin footer end-->
+    <!-- mixins scripts begin-->
+    <!-- jQuery-->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <!-- Framework-->
+    <script src="foundation/foundation.min.js"></script>
+    <!-- Slider-->
+    <script src="lightslider/lightslider.min.js"></script>
+    <!-- Chart-->
+    <script src="chart/chart.min.js"></script>
+    <!-- Custom script-->
+    <script src="js/main.js"></script>
+    <!-- mixins scripts end-->
+  </body>
+  <!-- document-vault.pug end		-->
+</html>

@@ -1,0 +1,99 @@
+@import ../mixins
+@import ../settings
+
+/*filters*/
+
+.filters
+	&-title
+		margin-top: 4px
+	&-form
+		margin-bottom: 15px
+		text-align: right
+		&-item
+			+md
+			width: auto
+			margin-bottom: 15px
+			+nl
+				margin-right: 20px
+		input
+			width: 154px
+			background-color: transparent
+			text-align: left
+			+f
+				background-color: transparent
+		.input-search-group
+			input
+				width: 100%
+		&.vertical
+			.filters-form-item
+				display: block
+				+mxa
+				text-align: center
+		&-table
+			margin-top: 30px
+			margin-bottom: 30px
+		&-location
+			.filters-label
+				margin-top: 15px
+	&-label
+		text-transform: uppercase
+		color: $light-blue
+		+rem(14)
+		font-weight: 700
+
+
+
++max1023
+
+	.filters
+		&-form
+			&.horizontal-medium-down
+				.filters-form-item
+					display: inline-block
+					+nl
+						margin-right: 20px
+			&-table
+				text-align: center
+
+
++max639
+
+	.filters
+		&-form
+			// margin-top: 15px
+			margin-top: 0
+			text-align: left
+			&-item
+				display: block
+				margin-bottom: 5px
+			&-location
+				.filters-label
+					margin-top: 0
+			&.horizontal-medium-down
+				.filters-form-item
+					display: block
+					+nl
+						margin-right: auto
+			input
+		&-label
+			+mx(15px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+/*Buttons*/
+
+/*Regular buttons*/
+
+.button
+	padding: 13px 25px
+	border-radius: 4px
+	font-weight: 500
+	+rem(17)
+	+nw
+	min-width: 158px
+	+tm
+	+outline
+	/*SIZING*/
+	&.xtiny
+		padding: 6px 15px
+		+rem(13)
+		font-weight: 700
+		min-width: 70px
+	&.tiny
+		padding: 11px 17px
+		+rem(13)
+		font-weight: 700
+		min-width: 102px
+	&.small
+		padding: 11px 20px
+		+rem(15)
+		font-weight: 500
+		min-width: 130px
+	&.xregular
+		padding: 14px 25px
+		+rem(19)
+		font-weight: 500
+		min-width: 180px
+	&.large
+		padding: 9px 25px
+		+rem(23)
+		font-weight: 300
+		min-width: 220px
+	&.xlarge
+		padding: 21px 45px
+		+rem(28)
+		font-weight: 300
+		min-width: 300px
+
++foundationBtnDefault($primary, #fff)
++foundationBtn('primary', $primary-btn, #fff)
++foundationBtn('secondary', $secondary, $main)
++foundationBtn('success', $success, #fff)
++foundationBtn('alert', $alert, #fff)
++foundationBtn('warning', $warning, #fff)
+
+/*Outline buttons*/
+
+.button.hollow
+	background-color: transparent
+
++foundationBtnHollowDefault('primary', $primary, $primary)
++foundationBtnHollow('primary', $primary-btn, $primary-btn)
++foundationBtnHollow('secondary', $secondary, $main)
++foundationBtnHollow('success', $success, $success)
++foundationBtnHollow('alert', $alert, $alert)
++foundationBtnHollow('warning', $warning, $warning)
++foundationBtnHollow('on-dark', $btn-on-dark, $btn-on-dark)
+
+.button.hollow
+	&.secondary
+		+hf
+			background-color: transparent
+			border-color: darken($secondary, 10%)
+			color: darken($main, 10%)
+	&.on-dark
+		+hf
+			color: $primary-btn
+
+
+.button.disabled,
+.button[disabled]
+	&,
+	&.primary,
+	&.secondary,
+	&.success,
+	&.alert,
+	&.warning
+		&,
+		&:hover,
+		&:focus
+			background-color: #fff
+			border-color: $disabled
+			color: $disabled
+			opacity: 1
+
+.button
+	&.hollow
+		&.secondary
+			&.is-active
+				// border-color: $primary
+				// color: $primary
+				background-color: #fff
+
+.button-text
+	&-normal
+	&-active
+		display: none
+
+.button
+	&.is-active
+		.button-text-normal
+			display: none
+		.button-text-active
+			display: inline-block
+
+.load-more
+	margin-right: 15px
+	margin-left: 15px
+	margin-top: 24px
+	text-align: center
+
+
++max639
+	
+	.button
+		min-width: 100px
+		&.xtiny
+			// min-width: 70px
+		&.tiny
+			// min-width: 102px
+		&.small
+			// min-width: 130px
+		&.xregular
+			// min-width: 180px
+		&.large
+			// min-width: 220px
+		&.xlarge
+			// min-width: 300px
+
+	.load-more
+		margin-top: 15px
+
+
+
+

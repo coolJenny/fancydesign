@@ -1,0 +1,127 @@
+/*Forms*/
+
+@import forms/_checkbox
+@import forms/_input-textarea
+@import forms/_select
+
+
+/*secure-group*/
+
+.secure-group
+	&-container
+		margin-bottom: 10px
+		text-align: center
+	&
+		+in
+		position: relative
+		padding-left: 20px
+	&-img
+		position: absolute
+		top: 1px
+		left: 0
+		&-lock
+			display: inline-block
+			margin-top: -3px
+	&-text
+		&-login
+				display: inline-block
+				color: #8797a4
+
+.form-text-small
+	+in
+	font-weight: 400
+	color: #8797a4
+	+rem(12)
+	margin-bottom: 0
+
+label
+	+in
+	color: inherit
+
+.permissions
+	&-group
+		margin-right: 20%
+		margin-top: -10px
+	&-title
+	&-body
+		padding: 25px
+		&-checkbox
+			padding-bottom: 10px
+		&-button
+			margin-right: 60%
+
+.password-forgotten
+	padding: 45px 
+	text-align: center
+	&-header
+		margin-bottom: 30px
+	&-body
+
+.password
+	&-group
+		margin-right: 60%
+		margin-top: -10px
+	&-title
+	&-body
+		padding: 25px
+		&-input
+			padding-bottom: 10px
+		&-button
+
+
+.form
+	&-header
+		margin-bottom: 20px
+	&-body
+		margin-bottom: 13px
+	&-container
+		position: relative
+	&-divider
+		&-container
+			position: relative
+		&
+			position: absolute
+			top: 10%
+			left: -$offset
+			bottom: 0
+			z-index: 1
+			width: 1px
+			height: 80%
+			background-color: #eeeff4
+		
+.create-account-form,
+.contact-form
+	text-align: center
+
+.forgot-password
+	margin-bottom: 10px
+	text-align: right
+
+.form-box
+	position: relative
+	// +px(51)
+
+.profile-form
+	margin-bottom: 30px
+
+.comments-form
+	margin-bottom: 30px
+	textarea
+		height: 220px
+
+.create-account-contact-us
+	padding-top: 75px
+	padding-bottom: 30px
+
++max639
+
+	.create-account-contact-us
+		padding-top: 30px
+	
+	.form-divider
+		top: -15px
+		left: 0
+		height: 1px
+		width: 100%
+
+

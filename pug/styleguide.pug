@@ -1,0 +1,292 @@
+include _mixins.pug
+
+doctype html
+// styleguide.pug begin
+html(lang='en')
+	+head
+	
+	body
+
+
+		.styleguide-section
+			.row
+				.column
+					h1 Styleguide
+			hr.styleguide-divider
+			
+		.styleguide-section
+			.row
+				.column
+					.styleguide-color-sample.bg-primary-btn
+					.styleguide-color-sample.bg-text-dark
+					.styleguide-color-sample.bg-gray-middle
+					.styleguide-color-sample.bg-gray-light
+					.styleguide-color-sample.bg-light-blue
+					.styleguide-color-sample.bg-main
+					.styleguide-color-sample.bg-border
+					.styleguide-color-sample.bg-secondary
+					.styleguide-color-sample.bg-gray-bg 
+					.styleguide-color-sample.bg-primary-blue
+					.styleguide-color-sample.bg-primary
+					.styleguide-color-sample.bg-alert
+					.styleguide-color-sample.bg-warning
+			hr.styleguide-divider
+			
+		.styleguide-section
+			.row
+				.column.medium-6
+					h3.text-dark .text-dark
+					h3.text-blue .text-blue
+					h3.text-green .text-green
+					h3.text-light-blue .text-light-blue
+
+				.column.medium-6
+					h3.text-primary-btn .text-primary-btn
+					h3.text-text-dark .text-text-dark
+					h3.text-gray-middle .text-gray-middle
+					h3.text-gray-light .text-gray-light
+					h3.text-light-blue .text-light-blue
+					h3.text-main .text-main
+					h3.text-border .text-border
+					h3.text-secondary .text-secondary
+					h3.text-gray-bg  .text-gray-bg 
+					h3.text-primary-blue .text-primary-blue
+					h3.text-blue-light  .text-blue-light 
+					h3.text-primary .text-primary
+					h3.text-alert .text-alert
+					h3.text-warning .text-warning
+
+		hr.styleguide-divider
+			
+		.styleguide-section
+			.row
+				.column
+					h3
+						| Framework 
+						a(href='http://foundation.zurb.com/sites/docs/', target='_blank') Foundation 6
+		hr.styleguide-divider
+
+
+		.styleguide-section
+			.row
+				.column
+					p
+						| Base font size. 16px
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam totam debitis magnam nesciunt facilis adipisci excepturi repellendus fugiat asperiores, reprehenderit perferendis harum assumenda architecto consequatur facere maxime pariatur accusantium exercitationem.
+		hr.styleguide-divider
+
+
+
+		.styleguide-section
+			.row
+				.column.medium-6
+					h1 Heading 1
+					h2 Heading 2
+					h2.section-heading Heading 2
+					h3 Heading 3
+					h3.smaller Heading 3
+					h4 Heading 4
+					h5 Heading 5
+					h6 Heading 6
+
+				.column.medium-6
+					h1 52px
+					h2 35px
+					h2.section-heading 33px - h2.section-heading
+					h3 28px
+					h3.smaller 26px - h3.smaller
+					h4 19px
+					h5 16px
+					h6 14px							
+
+		hr.styleguide-divider
+				
+		.styleguide-section
+			.row
+				.column.medium-6
+					.styleguide-font-weight-samples
+						.thin .thin - 100
+						.light .light - 300
+						.regular .regular - 400
+						.medium .medium - 500
+						.semibold .semibold - 600
+						.bold .bold - 700
+						.black .black - 900
+
+				.column.medium-6
+					h3.thin h3.thin - 100
+					h3.light h3.light - 300
+					h3.regular h3.regular - 400
+					h3.medium h3.medium - 500
+					h3.semibold h3.semibold - 600
+					h3.bold h3.bold - 700
+					h3.black h3.black - 900
+		hr.styleguide-divider
+
+
+
+		.styleguide-section
+			.row
+				.column.large-4.medium-6
+					a.button.expanded(href='#0') .button (default)
+				.column.large-4.medium-6
+					a.button.expanded.primary(href='#0') .button.primary
+				.column.large-4.medium-6
+					a.button.expanded.secondary(href='#0') .button.secondary
+				.column.large-4.medium-6
+					a.button.expanded.success(href='#0') .button.success
+				.column.large-4.medium-6
+					a.button.expanded.alert(href='#0') .button.alert
+				.column.large-4.medium-6.end
+					a.button.expanded.warning(href='#0') .button.warning
+		hr.styleguide-divider
+
+		.styleguide-section
+			.row
+				.column.large-4.medium-6
+					a.button.expanded.hollow(href='#0') .button.hollow (default)
+				.column.large-4.medium-6
+					a.button.expanded.hollow.primary(href='#0') .button.hollow.primary
+				.column.large-4.medium-6
+					a.button.expanded.hollow.secondary(href='#0') .button.hollow.secondary
+				.column.large-4.medium-6
+					a.button.expanded.hollow.success(href='#0') .button.hollow.success
+				.column.large-4.medium-6
+					a.button.expanded.hollow.alert(href='#0') .button.hollow.alert
+				.column.large-4.medium-6
+					a.button.expanded.hollow.warning(href='#0') .button.hollow.warning
+				.column.large-4.medium-6.end
+					div(style="background: #242f43; padding: 15px")
+						a.button.expanded.hollow.on-dark(href='#0') .button.hollow.on-dark
+		hr.styleguide-divider
+
+
+		.styleguide-section.buttons-sizes
+			.row
+				.column
+					a.button.xtiny(href='#0') xtiny
+					a.button.tiny(href='#0') tiny
+					a.button.small(href='#0') small
+					a.button(href='#0') regular
+					a.button.xregular(href='#0') xregular
+					a.button.large(href='#0') large
+					a.button.xlarge(href='#0') xlarge
+				.column.medium-6.end
+					a.button.xtiny.expanded(href='#0') xtiny.expanded
+					a.button.tiny.expanded(href='#0') tiny.expanded
+					a.button.small.expanded(href='#0') small.expanded
+					a.button.expanded(href='#0') regular.expanded
+					a.button.xregular.expanded(href='#0') xregular.expanded
+					a.button.large.expanded(href='#0') large.expanded
+					a.button.xlarge.expanded(href='#0') xlarge.expanded
+		hr.styleguide-divider
+
+
+		.styleguide-section
+			.row
+				.column.large-4.medium-6
+					a.button.expanded.disabled(href='#0') .button (default).disabled
+				.column.large-4.medium-6
+					a.button.expanded.disabled.primary(href='#0') .button.primary.disabled
+				.column.large-4.medium-6
+					a.button.expanded.disabled.secondary(href='#0') .button.secondary.disabled
+				.column.large-4.medium-6
+					a.button.expanded.disabled.success(href='#0') .button.success.disabled
+				.column.large-4.medium-6
+					a.button.expanded.disabled.alert(href='#0') .button.alert.disabled
+				.column.large-4.medium-6.end
+					a.button.expanded.disabled.warning(href='#0') .button.warning.disabled
+
+
+				.column.large-4.medium-6
+					a.button.expanded.disabled.hollow(href='#0') .button.hollow (default).disabled
+				.column.large-4.medium-6
+					a.button.expanded.disabled.hollow.primary(href='#0') .button.hollow.primary.disabled
+				.column.large-4.medium-6
+					a.button.expanded.disabled.hollow.secondary(href='#0') .button.hollow.secondary.disabled
+				.column.large-4.medium-6
+					a.button.expanded.disabled.hollow.success(href='#0') .button.hollow.success.disabled
+				.column.large-4.medium-6
+					a.button.expanded.disabled.hollow.alert(href='#0') .button.hollow.alert.disabled
+				.column.large-4.medium-6.end
+					a.button.expanded.disabled.hollow.warning(href='#0') .button.hollow.warning.disabled
+		hr.styleguide-divider
+
+
+		.styleguide-section
+			.row
+				.column.medium-6
+					form
+						input(type="text")
+						input(type="text" placeholder="Placeholder")
+						input(type="password" placeholder="Placeholder")
+
+		hr.styleguide-divider
+
+
+		.styleguide-section
+			.row
+				.column
+					.badge.primary 2
+					.badge.secondary 1
+					.badge.warning 1
+					.badge.success 1
+					.badge.alert 1
+					.badge.primary 99
+					.badge.primary 999
+					.badge.primary 99999
+
+
+		hr.styleguide-divider
+			
+		.styleguide-section
+			.row
+				.column
+					h3
+						| Components
+
+			+header
+			+footer
+			+header-logged
+	
+			.bg-blue(style="padding: 30px 0;")
+				.row
+					.column
+						+create-account-contact-us
+
+			+financial-overview
+			+featured-in
+		
+			div(style="position: relative;")
+				+header-absolute
+				+hero
+
+			+page-nav
+
+			.row
+				.column.medium-4
+					+profile-menu
+			.row
+				.column.medium-4
+					+property-item-preview
+			
+
+		hr.styleguide-divider
+
+
+
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+
+		+scripts
+	// styleguide.pug end

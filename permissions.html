@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- permissions.pug begin-->
+<html lang="zxx">
+  <!-- mixin head begin-->
+  <head>
+    <!-- Meta-->
+    <meta charset="utf-8"/>
+    <!-- Title-->
+    <title>BitREI</title>
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=3.0, user-scalable=yes"/>
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"/>
+    <!-- Framework-->
+    <link rel="stylesheet" href="foundation/foundation.min.css"/>
+    <!-- Slider-->
+    <link rel="stylesheet" href="lightslider/lightslider.css"/>
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/global/global.css"/>
+    <link rel="stylesheet" href="css/components/advantages.css"/>
+    <link rel="stylesheet" href="css/components/choose.css"/>
+    <link rel="stylesheet" href="css/components/comments.css"/>
+    <link rel="stylesheet" href="css/components/documents.css"/>
+    <link rel="stylesheet" href="css/components/featured-in.css"/>
+    <link rel="stylesheet" href="css/components/filters.css"/>
+    <link rel="stylesheet" href="css/components/financial-overview.css"/>
+    <link rel="stylesheet" href="css/components/footer.css"/>
+    <link rel="stylesheet" href="css/components/header.css"/>
+    <link rel="stylesheet" href="css/components/hero.css"/>
+    <link rel="stylesheet" href="css/components/page-nav.css"/>
+    <link rel="stylesheet" href="css/components/profile-menu.css"/>
+    <link rel="stylesheet" href="css/components/profile.css"/>
+    <link rel="stylesheet" href="css/components/property-item.css"/>
+    <link rel="stylesheet" href="css/components/slider.css"/>
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/manifest.json"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="theme-color" content="#ffffff"/>
+  </head>
+  <!-- mixin head end-->
+  <body>
+    <!-- mixin header begin-->
+    <header class="header">
+      <div class="row">
+        <div class="column large-2">
+          <div class="row">
+            <div class="column large-12 small-6">
+              <!-- mixin header-logo begin--><a class="header-logo" href="home.html"><img src="img/template/header-logo.png" width="105" alt=""/></a>
+              <!-- mixin header-logo end-->
+            </div>
+            <div class="column small-6">
+              <!-- mixin header-menu-button begin-->
+              <!-- Menu button-->
+              <div class="menu-icon-container clearfix" data-responsive-toggle="header-menu" data-hide-for="large" data-toggle="header">
+                <button class="menu-icon" type="button" data-toggle="header-menu"></button>
+              </div>
+              <!-- mixin header-menu-button end-->
+            </div>
+          </div>
+        </div>
+        <div class="column large-10">
+          <!-- Collapsible Menu-->
+          <div class="header-menu-collapsible" id="header-menu">
+            <div class="row">
+              <div class="column large-8">
+                <!-- mixin header-menu-main begin-->
+                <div class="menu-centered">
+                  <ul class="header-menu menu dropdown" data-dropdown-menu="data-dropdown-menu" data-click-open="true">
+                    <li><a href="#">Buy Properties</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Knowledge</a>
+                      <ul class="menu">
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- mixin header-menu-main end-->
+              </div>
+              <div class="column large-4">
+                <!-- mixin header-menu-unlogged begin-->
+                <div class="header-menu-unlogged-container"><a class="header-menu-user-item button hollow on-dark tiny" href="login-create-account.html">SIGN UP</a><span class="header-menu-user-item">or</span><a class="header-menu-user-item header-menu-user-link-login" href="login-create-account.html">login</a></div>
+                <!-- mixin header-menu-unlogged end-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- mixin header end-->
+    <!-- mixin page-nav begin-->
+    <!-- Collapsible Menu-->
+    <div class="page-nav">
+      <div class="row">
+        <div class="column">
+          <!-- Menu button-->
+          <div class="menu-icon-container clearfix" data-responsive-toggle="page-nav-menu" data-hide-for="large">
+            <button class="menu-icon inverse" type="button" data-toggle="page-nav-menu"></button>
+          </div>
+          <ul class="menu page-nav-menu dropdown" id="page-nav-menu" data-dropdown-menu="data-dropdown-menu" data-click-open="true">
+            <li><a href="portfolios.html">Portfolios</a></li>
+            <li><a href="watchlist.html">Watch List</a></li>
+            <li><a href="transaction-history.html">Transaction History</a></li>
+            <li class="is-active"><a href="document-vault.html">Document Vault</a></li>
+            <li><a href="#">Profile<img class="icon-right" src="img/template/arrow-down.png" alt="" width="8"/></a>
+              <ul class="menu">
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="password-reset.html">Password Reset</a></li>
+                <li><a href="permissions.html">Permissions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- mixin page-nav end-->
+    <main class="box-blue">
+      <div class="section">
+        <div class="row">
+          <div class="columns xlarge-2 large-3 medium-4">
+            <!-- mixin profile-menu begin-->
+            <ul class="menu vertical profile-menu box-shadow section">
+              <li class="is-active"><a href="profile.html">My Profile</a></li>
+              <li><a href="password-reset.html">Password Reset</a></li>
+              <li><a href="permissions.html">Permissions</a></li>
+            </ul>
+            <!-- mixin profile-menu end-->
+          </div>
+          <div class="columns xlarge-7 large-8 medium-8 end">
+            <div class="section">
+              <h3 class="section-title">Permissions & Notification Settings</h3>
+              <div class="box-shadow box-padding-sm">
+                <form>
+                  <div class="form-body">
+                    <!--  mixin checkbox begin-->
+                    <div class="checkbox">
+                      <input type="checkbox" id="checkbox-1"/>
+                      <label for="checkbox-1">Allow email account alerts</label>
+                    </div>
+                    <!--  mixin checkbox end-->
+                    <!--  mixin checkbox begin-->
+                    <div class="checkbox">
+                      <input type="checkbox" id="checkbox-2"/>
+                      <label for="checkbox-2">Subscribe to Hot Properties Email</label>
+                    </div>
+                    <!--  mixin checkbox end-->
+                    <!--  mixin checkbox begin-->
+                    <div class="checkbox">
+                      <input type="checkbox" id="checkbox-3"/>
+                      <label for="checkbox-3">Publicly display my full name in the board of investors</label>
+                    </div>
+                    <!--  mixin checkbox end-->
+                    <!--  mixin checkbox begin-->
+                    <div class="checkbox">
+                      <input type="checkbox" id="checkbox-4"/>
+                      <label for="checkbox-4">Publicly display my initials as my name on the board of investors</label>
+                    </div>
+                    <!--  mixin checkbox end-->
+                    <!--  mixin checkbox begin-->
+                    <div class="checkbox">
+                      <input type="checkbox" id="checkbox-5"/>
+                      <label for="checkbox-5">Publicly display my screen name as my name on the board of investors</label>
+                    </div>
+                    <!--  mixin checkbox end-->
+                  </div>
+                  <div class="form-footer">
+                    <button class="button" type="submit">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- mixin footer begin-->
+    <footer class="footer">
+      <div class="footer-nav">
+        <div class="row">
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">QUICK MENU</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">Buy Properties</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Knowledge</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">HELP</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Our History</a></li>
+                  <li><a href="#">Ranking of properties</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">USER menu</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">Pellentesque leo</a></li>
+                  <li><a href="#">Etiam orci</a></li>
+                  <li><a href="#">Quis consequat et</a></li>
+                  <li><a href="#">Nunc pharetra interdum</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3">
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">about us</h6>
+              <div class="footer-nav-item-body">
+                <p>Donec tempor pellentesque risus, eget pharetra augue tristique rhoncus. Praesent nec felis arc.</p>
+                <p>Donec rhoncus nec justo nec finibus. Mauris aliquam metus dolor, vel placerat dolor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-main">
+        <div class="row">
+          <div class="column">
+            <div class="footer-main-header">
+              <div class="row">
+                <div class="column small-6"><a class="footer-logo" href="home.html"><img src="img/template/footer-logo.png" alt="" width="82"/></a></div>
+                <div class="column small-6">
+                  <div class="footer-social-login">
+                    <!-- social-list mixin begin-->
+                    <ul class="menu social-list">
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/facebook.png" width="9" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/twitter.png" width="17" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/linkedin.png" width="18" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                    </ul>
+                    <!-- social-list mixin end-->
+                    <!-- hidden for small - it is represented in header--><a class="button tiny footer-btn hide-for-small-only" href="login-create-account.html">Login</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-main-text">
+              <div class="row">
+                <div class="column large-2">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only,</p>
+                </div>
+                <div class="column large-8">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances. This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances. This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances.</p>
+                </div>
+                <div class="column large-2">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only,</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- mixin footer end-->
+    <!-- mixins scripts begin-->
+    <!-- jQuery-->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <!-- Framework-->
+    <script src="foundation/foundation.min.js"></script>
+    <!-- Slider-->
+    <script src="lightslider/lightslider.min.js"></script>
+    <!-- Chart-->
+    <script src="chart/chart.min.js"></script>
+    <!-- Custom script-->
+    <script src="js/main.js"></script>
+    <!-- mixins scripts end-->
+  </body>
+  <!-- permissions.pug end-->
+</html>

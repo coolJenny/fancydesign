@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!-- propertypage.pug begin-->
+<html lang="zxx">
+  <!-- mixin head begin-->
+  <head>
+    <!-- Meta-->
+    <meta charset="utf-8"/>
+    <!-- Title-->
+    <title>BitREI</title>
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=3.0, user-scalable=yes"/>
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"/>
+    <!-- Framework-->
+    <link rel="stylesheet" href="foundation/foundation.min.css"/>
+    <!-- Slider-->
+    <link rel="stylesheet" href="lightslider/lightslider.css"/>
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/global/global.css"/>
+    <link rel="stylesheet" href="css/components/advantages.css"/>
+    <link rel="stylesheet" href="css/components/choose.css"/>
+    <link rel="stylesheet" href="css/components/comments.css"/>
+    <link rel="stylesheet" href="css/components/documents.css"/>
+    <link rel="stylesheet" href="css/components/featured-in.css"/>
+    <link rel="stylesheet" href="css/components/filters.css"/>
+    <link rel="stylesheet" href="css/components/financial-overview.css"/>
+    <link rel="stylesheet" href="css/components/footer.css"/>
+    <link rel="stylesheet" href="css/components/header.css"/>
+    <link rel="stylesheet" href="css/components/hero.css"/>
+    <link rel="stylesheet" href="css/components/page-nav.css"/>
+    <link rel="stylesheet" href="css/components/profile-menu.css"/>
+    <link rel="stylesheet" href="css/components/profile.css"/>
+    <link rel="stylesheet" href="css/components/property-item.css"/>
+    <link rel="stylesheet" href="css/components/slider.css"/>
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/manifest.json"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="theme-color" content="#ffffff"/>
+  </head>
+  <!-- mixin head end-->
+  <body>
+    <!-- mixin header begin-->
+    <header class="header">
+      <div class="row">
+        <div class="column large-2">
+          <div class="row">
+            <div class="column large-12 small-6">
+            <!-- mixin header-logo begin--><a class="header-logo" href="home.html" style="padding-top:0px;"><img src="img/template/bitREI_logo.svg" width="200" alt=""/></a>
+            <!-- mixin header-logo end-->
+            </div>
+            <div class="column small-6">
+              <!-- mixin header-menu-button begin-->
+              <!-- Menu button-->
+              <div class="menu-icon-container clearfix" data-responsive-toggle="header-menu" data-hide-for="large" data-toggle="header">
+                <button class="menu-icon" type="button" data-toggle="header-menu"></button>
+              </div>
+              <!-- mixin header-menu-button end-->
+            </div>
+          </div>
+        </div>
+        <div class="column large-10">
+          <!-- Collapsible Menu-->
+          <div class="header-menu-collapsible" id="header-menu">
+            <div class="row">
+              <div class="column large-7">
+                <!-- mixin header-menu-main begin-->
+                <div class="menu-centered">
+                  <ul class="header-menu menu dropdown" data-dropdown-menu="data-dropdown-menu" data-click-open="true">
+                    <li><a href="#">Buy Properties</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Knowledge</a>
+                      <ul class="menu">
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- mixin header-menu-main end-->
+              </div>
+              <div class="column large-5">
+                <div class="row">
+                  <div class="column large-offset-1 large-8">
+                    <!-- mixin header-menu-logged begin-->
+                    <div class="header-menu-user-container">
+                      <ul class="menu header-menu-user-logged-container dropdown" data-dropdown-menu="data-dropdown-menu" data-click-open="true">
+                        <li><a class="header-menu-user-logged" href="#">
+                            <div class="header-menu-user-photo-container">
+                              <img class="header-menu-user-photo" src="img/media/comments/photo-1.jpg" alt=""/>
+                            </div>
+                            <div class="header-menu-user-name-position">
+                              <h6 class="header-menu-user-name">Michael McKensey</h6>
+                              <h6 class="header-menu-user-position small">Level 1 Investor</h6>
+                            </div></a>
+                          <ul class="menu">
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- mixin header-menu-logged end-->
+                  </div>
+                  <div class="column large-3">
+                    <div class="header-menu-cart-container">
+                      <div class="header-menu-user-photo-container">
+                        <div class="header-menu-cart-badge badge primary">2</div><img class="header-menu-user-photo" src="img/template/cart.png" alt=""/>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- mixin header end-->
+    <div class="main box-blue">
+      <div class="section property-item-expanded-propertypage">
+        <div class="row">
+          <div class="column large-8">
+            <div class="row">
+                <div class="property-item-expanded propertypage box-white js-property-slider-thumbnails-parent section">
+                  <div class="property-item">
+                    <!-- mixin property-item-header-small begin-->
+                    <div class="property-item-header">
+                      <div class="property-item-container">
+                        <div class="property-item-price">
+                          <h2 class="property-item-price-main investment-details-header cart text-text-dark">Investment Cart</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- mixin property-item-header-small end-->
+                    <div class="property-item-body">
+                      <div class="property-item-container">
+                        <!-- mixin property-item-characteristics begin-->
+                        <div class="property-item-characteristics rented">
+                          <!-- property-item-characteristics-row mixin begin-->
+                          <div class="property-item-characteristics-row rented">
+                            <div class="row">
+                              <div class="column small-6 first-column">
+                                <p class="progress-value-caption rented"><span class="text-blue">Current Rent </span><span class="text-gray-light"> | Market Rent</span></p>
+                                <h2 class="progress-value rented text-blue">$1,500</h2>
+                              </div>
+                              <div class="column small-6">
+                                <p class="progress-value-caption rented">1st Year Income per Bit</p>
+                                <h2 class="progress-value rented text-blue">$1,164</h2>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- property-item-characteristics-row mixin end-->
+                          <!-- property-item-characteristics-row mixin begin-->
+                          <div class="property-item-characteristics-row rented last">
+                            <div class="row">
+                              <div class="column small-6 first-column">
+                                <p class="progress-value-caption rented">Est Property Expenses</p>
+                                <h2 class="progress-value rented text-blue">12.00%</h2>
+                              </div>
+                              <div class="column small-6">
+                                <p class="progress-value-caption rented">Cash ROI</p>
+                                <h2 class="progress-value rented text-blue">7.76%</h2>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- property-item-characteristics-row mixin end-->
+                          <div class="property-item-characteristics-row rented column-headers">
+                            <div class="row">
+                              <div class="column small-3 thumb-img-column"></div>
+                              <div class="column small-3 property-details-column">
+                                <p class="property-item-id">Property Details</p>
+                              </div>
+                              <div class="column small-2 priceperbit-column">
+                                <p class="property-item-id">Price per Bit</p>
+                              </div>
+                              <div class="column small-2 quantity-column">
+                                <p class="property-item-id">Quantity</p>
+                              </div>
+                              <div class="column small-2 total-column">
+                                <p class="property-item-id">Line Total</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="property-item-characteristics-row rented column-headers">
+                            <div class="row">
+                              <div class="column small-3 thumb-img-column">
+                                <img />
+                              </div>
+                              <div class="column small-3 property-details-column">
+                                <p class="property-item-id">Property ID: 1234</p>
+                                <h2 class="property-item-address-value">7143 North Street</h2>
+                                <h2 class="property-item-address-value">Fond Du Lac, WI 54935</h2>
+                                <p class="property-item-price-value">Property Value: $150,000</p>
+                                <p class="remove text-alert">Remove</p>
+                              </div>
+                              <div class="column small-2 priceperbit-column">
+                                <h2 class="progress-value rented text-blue">$1,164</h2>
+                              </div>
+                              <div class="column small-2 quantity-column">
+                                <div class="incrementor-container">
+                                  <img class="incrementor" src="img/media/property-item/incrementor.png" alt="incrementor"/>
+                                </div>
+                              </div>
+                              <div class="column small-2 total-column">
+                                <h2 class="progress-value rented text-blue">$1,164</h2>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- mixin property-item-characteristics end-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="column large-4">
+            <div class="box-white property-item invest-watch section">
+              <!-- mixin property-item-header-small begin-->
+              <div class="property-item-header cart">
+                <div class="property-item-container text-center">
+                  <h2 class="property-item-price-main investment-details-header cart text-text-dark">Investment Subtotal</h2>
+                  <h2 class="progress-value rented cart">$11,150</h2>
+                  <p class="property-item-id">Estimated Annual ROI for these properties 9.54%</p>
+                </div>
+              </div>
+              <!-- mixin property-item-header-small end-->
+              <div class="property-item-footer">
+                <div class="property-item-container text-center">
+                  <a class="button expanded" href="#">Claim Your Investment</a>
+                  <p class="text-justify">*Closing costs not included. This investment will be
+                    paid directly to the directly to the title company. Payment instructions are available after executing the paperwork on the fol-
+                    lowing pages.
+                  </p>
+                  <!-- social-list mixin begin-->
+                  <ul class="menu security-list">
+                    <!-- social-list-item mixin begin-->
+                    <li><a href="#"><img src="img/template/veriSign.png" width="99" alt=""/></a></li>
+                    <!-- social-list-item mixin end-->
+                    <!-- social-list-item mixin begin-->
+                    <li><a href="#"><img src="img/template/BBB.png" width="110" alt=""/></a></li>
+                    <!-- social-list-item mixin end-->
+                    <!-- social-list-item mixin begin-->
+                    <li><a href="#"><img src="img/template/norton.png" width="100" alt=""/></a></li>
+                    <!-- social-list-item mixin end-->
+                  </ul>
+                  <!-- social-list mixin end-->
+                </div>
+              </div>
+            </div>
+            <div class="property-watch-social">
+
+              <div class="property-watch"><a class="button hollow secondary small" href="#0"><img class="icon-left" src="img/template/chat.png" alt="" width="15"><span class="button-text-normal">Speak with an Advisor</span></a>
+                <!-- <p class="property-watch-text">236 Watching</p> -->
+              </div>
+              <!-- social-list mixin begin-->
+              <ul class="menu social-list">
+                <!-- social-list-item mixin begin-->
+                <li><a href="#"><img src="img/template/facebook.png" width="9" alt=""/></a></li>
+                <!-- social-list-item mixin end-->
+                <!-- social-list-item mixin begin-->
+                <li><a href="#"><img src="img/template/twitter.png" width="17" alt=""/></a></li>
+                <!-- social-list-item mixin end-->
+                <!-- social-list-item mixin begin-->
+                <li><a href="#"><img src="img/template/linkedin.png" width="18" alt=""/></a></li>
+                <!-- social-list-item mixin end-->
+              </ul>
+              <!-- social-list mixin end-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Tab panels section begin -->
+    <div class="property-info-panel box-blue">
+      <!-- property-info tab panels begin -->
+      <div class="section">
+        <div class="row">
+          <div class="column">
+            <div class="section box-white">
+              <div class="tabs-set">
+                <ul class="tabs box-padding-side" id="tabs-1" data-tabs>
+                  <li class="tabs-title is-active"><a href="#tabs-panel-1">Property Info</a></li>
+                  <li class="tabs-title property-tabs-title"><a href="#tabs-panel-2">Current Tenant & Lease</a></li>
+                  <li class="tabs-title property-tabs-title"><a href="#tabs-panel-3">Investment Terms</a></li>
+                  <li class="tabs-title property-tabs-title"><a href="#tabs-panel-4">FAQ's</a></li>
+                </ul>
+                <div class="tabs-content" data-tabs-content="tabs-1">
+                  <div class="tabs-panel box-padding-side section is-active" id="tabs-panel-1">
+                    <h4>Morbi suscipit neque mi, ac placerat sem suscipit laoreet</h4>
+                    <p>Sed sed rutrum massa. Cras tempus dignissim porta. Morbi vel odio leo. Pellentesque tincidunt nulla neque, nec porta ipsum egestas quis. Curabitur non luctus dolor, eu dignissim lorem. Curabitur velit ipsum, volutpat vel odio ac, efficitur semper ante. Duis a lobortis eros.</p>
+                    <p>Proin laoreet turpis non ultricies sagittis. Phasellus interdum porttitor erat sit amet euismod. Nam tempus dolor sit amet magna dapibus egestas. Donec ultrices erat sit amet metus aliquet, sit amet posuere ex efficitur. Fusce ullamcorper rutrum metus. Fusce accumsan in odio nec tincidunt.</p>
+                    <ul>
+                      <li>Morbi ac ligula a enim</li>
+                      <li>Luctus malesuada pellentesque pulvinar venenatis</li>
+                      <li>Nam odio neque, bibendum et consequat</li>
+                      <li>Euismod nec purus, suspendisse feugiat tincidunt pretium</li>
+                    </ul>
+                  </div>
+                  <div class="tabs-panel box-padding-side section" id="tabs-panel-2">
+                    <h4>Tabs Panel 2</h4>
+                    <p>Sed sed rutrum massa. Cras tempus dignissim porta. Morbi vel odio leo. Pellentesque tincidunt nulla neque, nec porta ipsum egestas quis. Curabitur non luctus dolor, eu dignissim lorem. Curabitur velit ipsum, volutpat vel odio ac, efficitur semper ante. Duis a lobortis eros.</p>
+                    <p>Proin laoreet turpis non ultricies sagittis. Phasellus interdum porttitor erat sit amet euismod. Nam tempus dolor sit amet magna dapibus egestas. Donec ultrices erat sit amet metus aliquet, sit amet posuere ex efficitur. Fusce ullamcorper rutrum metus. Fusce accumsan in odio nec tincidunt.</p>
+                    <ul>
+                      <li>Morbi ac ligula a enim</li>
+                      <li>Luctus malesuada pellentesque pulvinar venenatis</li>
+                      <li>Nam odio neque, bibendum et consequat</li>
+                      <li>Euismod nec purus, suspendisse feugiat tincidunt pretium</li>
+                    </ul>
+                  </div>
+                  <div class="tabs-panel box-padding-side section" id="tabs-panel-3">
+                    <h4>Tabs Panel 3</h4>
+                    <p>Sed sed rutrum massa. Cras tempus dignissim porta. Morbi vel odio leo. Pellentesque tincidunt nulla neque, nec porta ipsum egestas quis. Curabitur non luctus dolor, eu dignissim lorem. Curabitur velit ipsum, volutpat vel odio ac, efficitur semper ante. Duis a lobortis eros.</p>
+                    <p>Proin laoreet turpis non ultricies sagittis. Phasellus interdum porttitor erat sit amet euismod. Nam tempus dolor sit amet magna dapibus egestas. Donec ultrices erat sit amet metus aliquet, sit amet posuere ex efficitur. Fusce ullamcorper rutrum metus. Fusce accumsan in odio nec tincidunt.</p>
+                    <ul>
+                      <li>Morbi ac ligula a enim</li>
+                      <li>Luctus malesuada pellentesque pulvinar venenatis</li>
+                      <li>Nam odio neque, bibendum et consequat</li>
+                      <li>Euismod nec purus, suspendisse feugiat tincidunt pretium</li>
+                    </ul>
+                  </div>
+                  <div class="tabs-panel box-padding-side section" id="tabs-panel-4">
+                    <h4>Tabs Panel 4</h4>
+                    <p>Sed sed rutrum massa. Cras tempus dignissim porta. Morbi vel odio leo. Pellentesque tincidunt nulla neque, nec porta ipsum egestas quis. Curabitur non luctus dolor, eu dignissim lorem. Curabitur velit ipsum, volutpat vel odio ac, efficitur semper ante. Duis a lobortis eros.</p>
+                    <p>Proin laoreet turpis non ultricies sagittis. Phasellus interdum porttitor erat sit amet euismod. Nam tempus dolor sit amet magna dapibus egestas. Donec ultrices erat sit amet metus aliquet, sit amet posuere ex efficitur. Fusce ullamcorper rutrum metus. Fusce accumsan in odio nec tincidunt.</p>
+                    <ul>
+                      <li>Morbi ac ligula a enim</li>
+                      <li>Luctus malesuada pellentesque pulvinar venenatis</li>
+                      <li>Nam odio neque, bibendum et consequat</li>
+                      <li>Euismod nec purus, suspendisse feugiat tincidunt pretium</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- property-info tab panels end -->
+    </div>
+    <!-- Tab panels section end -->
+    <!-- mixin create-account-contact-us begin-->
+    <div class="create-account-contact-us box-white-no-shadow">
+      <div class="row" data-equalizer="data-equalizer" data-equalize-on="medium">
+        <div class="column medium-6">
+          <div class="row">
+            <div class="column xlarge-6 large-7 medium-11 medium-centered" data-equalizer-watch="data-equalizer-watch">
+              <div class="vertical-parent">
+                <div class="vertical-middle">
+                  <!-- create-account-form mixin begin-->
+                  <form class="section create-account-form">
+                    <!-- form-header mixin begin-->
+                    <div class="form-header">
+                      <h3 class="light">Are You Interested?</h3>
+                      <h3 class="semibold text-green">Open an Account!</h3>
+                    </div>
+                    <!-- form-header mixin begin-->
+                    <div class="form-body">
+                      <input type="email" placeholder="E-mail"/>
+                      <input type="password" placeholder="Password"/>
+                      <input type="password" placeholder="Confirm Password"/>
+                      <button class="button expanded" type="submit">Get Started</button>
+                    </div>
+                    <div class="form-footer">
+                      <!-- mixin secure-group begin-->
+                      <div class="secure-group-container">
+                        <div class="secure-group"><img class="secure-group-img" src="img/template/lock.png" alt="" width="12"/>
+                          <h6 class="form-text-small">100% secure. Your e-mail stays only with us!</h6>
+                        </div>
+                      </div>
+                      <!-- mixin secure-group end-->
+                    </div>
+                  </form>
+                  <!-- create-account-form mixin end-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column medium-6">
+          <div class="form-container">
+            <div class="row">
+              <div class="column medium-11 medium-centered large-float-right" data-equalizer-watch="data-equalizer-watch">
+                <div class="vertical-parent">
+                  <div class="vertical-middle">
+                    <form class="contact-form section">
+                      <!-- form-header mixin begin-->
+                      <div class="form-header">
+                        <h3 class="light">Do You Have Any Questions?</h3>
+                        <h3 class="semibold text-blue">Contact Us!</h3>
+                      </div>
+                      <!-- form-header mixin begin-->
+                      <div class="form-body">
+                        <div class="row">
+                          <div class="column large-6">
+                            <input type="text" placeholder="Your Name"/>
+                            <input type="email" placeholder="E-mail"/>
+                          </div>
+                          <div class="column large-6">
+                            <textarea class="input-height-2" placeholder="Your message"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-footer">
+                        <button class="button hollow expanded" type="submit">Send</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-divider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mixin create-account-contact-us end-->
+    <!-- mixin footer begin-->
+    <footer class="footer">
+      <div class="footer-nav">
+        <div class="row">
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">QUICK MENU</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">Buy Properties</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Knowledge</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">HELP</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Our History</a></li>
+                  <li><a href="#">Ranking of properties</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3 medium-4">
+            <!-- footer-nav-item.pug begin-->
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">USER menu</h6>
+              <div class="footer-nav-item-body">
+                <ul class="menu vertical footer-menu">
+                  <li><a href="#">Pellentesque leo</a></li>
+                  <li><a href="#">Etiam orci</a></li>
+                  <li><a href="#">Quis consequat et</a></li>
+                  <li><a href="#">Nunc pharetra interdum</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer-nav-item.pug end-->
+          </div>
+          <div class="column large-3">
+            <div class="footer-nav-item section">
+              <h6 class="footer-nav-item-title">about us</h6>
+              <div class="footer-nav-item-body">
+                <p>Donec tempor pellentesque risus, eget pharetra augue tristique rhoncus. Praesent nec felis arc.</p>
+                <p>Donec rhoncus nec justo nec finibus. Mauris aliquam metus dolor, vel placerat dolor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-main">
+        <div class="row">
+          <div class="column">
+            <div class="footer-main-header">
+              <div class="row">
+                <div class="column small-6"><a class="footer-logo" href="home.html"><img src="img/template/footer-logo.png" alt="" width="82"/></a></div>
+                <div class="column small-6">
+                  <div class="footer-social-login">
+                    <!-- social-list mixin begin-->
+                    <ul class="menu social-list">
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/facebook.png" width="9" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/twitter.png" width="17" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                      <!-- social-list-item mixin begin-->
+                      <li><a href="#"><img src="img/template/linkedin.png" width="18" alt=""/></a></li>
+                      <!-- social-list-item mixin end-->
+                    </ul>
+                    <!-- social-list mixin end-->
+                    <!-- hidden for small - it is represented in header--><a class="button tiny footer-btn hide-for-small-only" href="login-create-account.html">Login</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-main-text">
+              <div class="row">
+                <div class="column large-2">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only,</p>
+                </div>
+                <div class="column large-8">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances. This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances. This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances.</p>
+                </div>
+                <div class="column large-2">
+                  <p>This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only,</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- mixin footer end-->
+    <!-- mixins scripts begin-->
+    <!-- jQuery-->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <!-- Framework-->
+    <script src="foundation/foundation.min.js"></script>
+    <!-- Slider-->
+    <script src="lightslider/lightslider.min.js"></script>
+    <!-- Chart-->
+    <script src="chart/chart.min.js"></script>
+    <!-- Custom script-->
+    <script src="js/main.js"></script>
+    <!-- mixins scripts end-->
+
+  </body>
+  <!-- propertypage.pug end-->
+</html>

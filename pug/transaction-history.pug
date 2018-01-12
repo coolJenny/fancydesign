@@ -1,0 +1,54 @@
+include _mixins.pug
+
+doctype html
+// transaction-history.pug begin
+html(lang='zxx')
+	+head
+	body
+		
+		+header
+		+page-nav
+
+		main.box-blue
+
+			.section
+			
+				.row
+					.column
+						.section.box-shadow.box-padding
+							.section-header
+								.row
+									.column.xlarge-6.large-5
+										h3.section-title.filters-title Transaction History
+									.column.xlarge-6.large-7
+										+filters-date
+
+							.row
+								.column
+
+									.table-column
+
+										.table-scroll
+											table.unstriped.hover
+												thead
+													tr
+														th Date
+														th Type
+														th Description
+														th Actions
+														th Amount
+												tbody
+													+table-row-download
+													+table-row-download
+													+table-row-download
+													+table-row-download
+															
+										.table-controls
+											a(href="#0").button.disabled Prev
+											a(href="#0").button.hollow Next
+
+								
+		+footer
+		+scripts
+
+	// transaction-history.pug end		

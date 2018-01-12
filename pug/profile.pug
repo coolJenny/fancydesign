@@ -1,0 +1,73 @@
+include _mixins.pug
+
+doctype html
+// my-profile.pug begin
+html(lang='zxx')
+	+head
+	body
+
+		+header
+		+page-nav
+
+		main.box-blue
+
+			.section
+				.row
+					.columns.xlarge-2.large-3.medium-4
+						+profile-menu
+							
+					.column.xlarge-10.large-9.medium-8
+
+						.profile-container
+
+							form
+
+								.cover-photo-container
+									img.cover-photo(src="img/media/profile/cover-photo.jpg", alt="")
+									+edit-photo
+									
+								
+								.profile-photo-name-btn
+									.row
+										.column.xlarge-37.large-5.xmedium-5.medium-6
+											.profile-photo-container
+												img.profile-photo(src="img/media/profile/photo.jpg", alt="")
+												+edit-photo
+										.column.xlarge-63.large-7.xmedium-7.medium-6
+											.row
+												.column.large-7
+													.profile-name-position
+														h3.profile-user-name
+															| John Doe
+															img.edit-name-icon(src="img/template/pencil-black.png", width='17' alt="")
+														h5.profile-user-position Level 1 Investor
+												.column.large-5
+													// button for large screens
+													button(type="submit").button.profile-btn.show-for-large Save
+
+								.row
+									.column.xlarge-37.large-5
+										.profile-edit-form.box-shadow.box-padding-sm.section.clearfix
+											input(type="text" placeholder="Screen name")
+											input(type="email" placeholder="Primary Email")
+											input(type="text" placeholder="Phone (optional)")
+											input(type="text" placeholder="Billing Address")
+											input(type="text" placeholder="Job Title")
+											textarea(placeholder="Bio")
+											
+										// button for small and medium screens
+										button(type="submit").button.profile-btn.hide-for-large Save
+
+
+									.column.xlarge-63.large-7
+										.section
+											h3.section-title Activity
+											+callouts
+									
+
+
+		+footer
+
+		+scripts
+							
+	// my-profile.pug end

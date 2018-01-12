@@ -1,0 +1,57 @@
+/*Lists*/
+
+body
+	counter-reset: outer
+	
+body > ol
+	counter-increment: outer
+
+ol
+	counter-reset: item
+
+ol li
+	display: block
+
+ol > li:before
+	content: counters(item, ".")". "
+	counter-increment: item
+
+.social-list
+	+in
+	margin-bottom: 15px
+	>li
+		>a
+			padding: 10px 9px
+
+.tabs-panel ul,
+.list-marked
+	margin-left: 0
+	> li
+		position: relative
+		padding-left: 20px
+		list-style: none
+		+b
+			+ct
+			position: absolute
+			top: 12px
+			left: 0
+			z-index: 1
+			width: 3px
+			height: 3px
+			border-radius: 50%
+			background-color: $primary
+
+
++max639
+
+	.social-list
+		margin-bottom: 5px
+
+
+
+
+
+
+
+
+

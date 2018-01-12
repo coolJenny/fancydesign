@@ -1,0 +1,51 @@
+/*Tabs*/
+
+.tabs
+	padding-top: 16px
+	padding-bottom: 15px
+	background: transparent
+	&-set
+		margin-bottom: 30px
+	&
+		border: none
+		border-bottom: 1px solid #eef2f4
+	&-content
+		color: inherit
+		border: none
+		background: transparent
+		padding-bottom: 15px
+		h1, h2, h3, h4, h5, h6
+			color: $text-dark
+	&-panel
+		padding-top: 33px
+		padding-bottom: 0
+	&-title
+		>a
+			position: relative
+			display: block
+			padding: 10px 0px
+			color: inherit
+			+rem(14)
+			+b
+				content: ''
+				display: none
+				position: absolute
+				top: 100%
+				left: 0
+				z-index: 1
+				width: 100%
+				height: 1px
+				background-color: $primary
+		+nl
+			padding-right: 25px
+		+hfa
+			color: $text-dark
+			background-color: transparent
+			+b
+				display: block
+
+	
++max639
+
+	.tabs-panel
+		padding-top: 15px

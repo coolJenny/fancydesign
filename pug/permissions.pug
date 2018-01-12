@@ -1,0 +1,43 @@
+include _mixins.pug
+
+doctype html
+// permissions.pug begin
+html(lang='zxx')
+	+head
+	body
+
+		+header
+		+page-nav
+		
+		main.box-blue
+
+			.section
+				.row
+					.columns.xlarge-2.large-3.medium-4
+						+profile-menu
+							
+					.columns.xlarge-7.large-8.medium-8.end
+
+						.section
+							h3.section-title Permissions & Notification Settings
+							
+							.box-shadow.box-padding-sm
+
+								form
+									.form-body
+										+checkbox("Allow email account alerts", 1)
+										+checkbox("Subscribe to Hot Properties Email", 2)
+										+checkbox("Publicly display my full name in the board of investors", 3)
+										+checkbox("Publicly display my initials as my name on the board of investors", 4)
+										+checkbox("Publicly display my screen name as my name on the board of investors", 5)
+
+									.form-footer
+										button(type="submit").button Save
+		
+
+
+		+footer
+
+		+scripts
+
+	// permissions.pug end

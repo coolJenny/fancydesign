@@ -1,0 +1,91 @@
+/*Tables*/
+
+.table-scroll
+	margin-bottom: $mb
+	border-right: $border 1px dashed
+	> table
+		width: 100%
+		min-width: 1190px
+	+l
+		margin-bottom: 0
+
+table
+	margin-bottom: $mb
+	border-spacing: 0px
+	thead,
+	tfoot
+		td,
+		th
+			padding: 19px 12px
+	thead
+		background: transparent
+		color: $text-dark
+	tbody
+		td,
+		th
+			padding: 10px 10px
+	table
+		/*second level table*/
+		td,
+		th
+			+py(0)
+	tr
+		td,
+		th
+			border-bottom: $border 1px solid
+
+		table
+			margin-bottom: 0
+			tr
+				td,
+				th
+					border-bottom: none
+
+	&.hover
+		thead,
+		tbody
+			tr
+				+h
+					background-color: $gray-bg
+	&.unstriped
+		tbody
+			background-color: transparent
+			tr
+				background-color: transparent
+
+
+.table-controls
+	margin-bottom: $mb
+	text-align: right
+	.button
+		+nl
+			margin-right: 15px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

@@ -1,0 +1,225 @@
+@import ../mixins
+@import ../settings
+
+/*header*/
+
+.header
+	position: relative
+	z-index: 4
+	height: 100px
+	padding-top: 19px
+	padding-bottom: 17px
+	background-color: $primary-btn
+	color: #fff
+	+titles-color-inherit
+	&-logo
+		+in
+		padding-top: 14px
+		padding-bottom: 14px
+	li
+		>a
+			+rem(15)
+			text-transform: uppercase
+			color: inherit
+	&-menu
+		margin-top: 7px
+		color: inherit
+		text-align: left
+		>li
+			position: relative
+			// display: inline-block
+			a
+			>a
+				display: block
+				padding: 20px 25px
+				+hf
+					color: #fff
+		&-sign
+			&-button
+				text-transform: uppercase
+				margin-bottom: 0
+				+rem(13)
+			&-text
+				display: inline-block
+				margin-left: 28px
+				margin-right: 22px
+				color: #fff
+				+rem(13)
+				font-weight: 400
+			&-link
+				display: inline-block
+				text-transform: uppercase
+				+rem(13)
+				font-weight: 400
+				border-bottom: 2px solid #a9acb1
+				color: #fff
+				&:hover
+					color: #fff
+		&-unlogged
+			&-container
+				margin-top: 17px
+		&-logged
+
+	.dropdown.menu
+		>li
+			&.is-dropdown-submenu-parent
+				>a
+					&:after
+						/*dropdown triangle*/
+						border-width: 5px
+						border-top-color: #fff
+	&-absolute
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		background-color: transparent
+
+.header-menu-user
+	&-container
+		+rem(13)
+	&-item
+		+md
+		margin-bottom: 0
+		+nl
+			margin-right: 20px
+	&-link-login
+		+rem(14)
+		border-bottom: #fff 1px solid
+		text-transform: uppercase
+		color: inherit
+		+hf
+			color: inherit
+
+.header-menu-user
+	&-logged
+		position: relative
+		display: block
+		padding-left: 70px
+		color: inherit
+		+hf
+		color: inherit
+		+a
+			right: 15px !important
+		&-container
+			border: #5b6578 1px solid
+			border-radius: 7px
+			>li
+				display: block
+			&.dropdown.menu>li.is-dropdown-submenu-parent>a
+				padding: 12px 40px 5px 66px
+	&-badge
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+	&-photo
+		&-container
+			position: absolute
+			top: 10px
+			left: 14px
+			z-index: 1
+			width: 42px
+			height: 42px
+		&
+			display: block
+			width: 100%
+			height: 100%
+			border-radius: 50%
+	&-name-position
+		text-transform: none
+	&-name
+		margin-bottom: 2px
+	&-position
+		font-weight: 300
+
+.menu
+	&-icon-container
+	&-icon
+		float: right
+		width: 40px
+		height: 40px
+		+a
+			top: 12px
+			left: 8px
+			right: 8px
+			width: auto
+		+hf
+			outline: none
+			+a
+				background: #fff
+				box-shadow: 0 7px 0 #fff, 0 14px 0 #fff
+		&.inverse
+			+a
+				background: $main
+				box-shadow: 0 7px 0 $main, 0 14px 0 $main
+			
+
+
++max1023
+
+	.header
+		padding-top: 15px
+		padding-bottom: 15px
+		height: auto
+		& &-menu
+			display: block
+		&-menu,
+		&-menu-user-logged-container
+			margin-top: 0px
+			>li
+				display: block
+				>a
+					padding: 15px 15px
+					border-bottom: rgba(255, 255, 255, 0.1) 1px solid
+				>ul
+					position: static
+					border: none
+					border-radius: 0
+					background-color: $primary-btn
+					>li
+						>a
+							margin-left: 30px
+							border-bottom: rgba(255, 255, 255, 0.1) 1px solid
+							color: #fff
+		&-menu
+			padding-top: 15px
+			&-unlogged-container
+				text-align: center
+			&-user-logged
+				+a
+					right: 5px !important
+				&-container
+					border: none
+					&.dropdown.menu
+						> li.is-dropdown-submenu-parent
+							> a
+								padding-right: 1.5rem
+		&-logo
+			padding-top: 0
+			padding-bottom: 0
+		&-absolute
+			&.is-active
+				background-color: $primary-btn
+			.header-menu-collapsible
+
+		.is-dropdown-submenu
+			>li
+				> a
+					+hf
+						color: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

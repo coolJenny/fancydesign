@@ -1,0 +1,111 @@
+include _mixins.pug
+
+doctype html
+// portfolio.pug begin
+html(lang='zxx')
+	+head
+	body
+		
+		+header-logged
+		+page-nav
+
+
+		main.box-blue
+
+			.section
+
+				.row
+					.column
+
+						.section
+							h3.section-title Net Account Value
+
+							.table-scroll
+								table.unstriped.hover
+									thead
+										tr
+											th Total Invested
+											th Lifetime Gross Yield
+											th Lifetime Net Yield
+											th Avg Quarterly Earnings
+											th Lifetime Cash Earnings
+											th Total Market Value of REIs
+									tbody
+										tr
+											td $90,000
+											td 18.25%
+											td 11.25%
+											td $2,325
+											td $25,000
+											td
+												table
+													tbody
+														tr
+															td $115,000
+															td
+																.text-green
+																	| +25.60%
+																	br
+																	small LIFETIME ROI
+							
+
+			+financial-overview
+
+			
+			.section
+				.row
+					.column
+
+						.section
+
+							.box-shadow.box-padding
+								.section-header
+									.row
+										.column.xlarge-6.large-5
+											h3.section-title.filters-title Itemized Portfolio Overview
+										.column.xlarge-6.large-7
+											+filters-date
+
+								.row
+									.column
+
+										.table-column
+
+											.table-scroll
+												table.unstriped.hover
+													thead
+														tr
+															th Property Name
+															th Total Invested
+															th Gross Yield
+															th Net Yield
+															th Avg Quarterly Earnings
+															th Total Market Value of REIs
+													tbody
+														+table-row-blue-green
+														+table-row-blue-green
+														+table-row-blue-green
+														+table-row-blue-green
+																
+											.table-controls
+												a(href="#0").button.disabled Prev
+												a(href="#0").button.hollow Next
+			
+
+			
+			.section
+				.row
+					.column
+						h3.section-title Activity
+						+callouts
+
+					
+
+
+
+
+		+footer
+		
+		+scripts
+
+	// portfolio.pug end

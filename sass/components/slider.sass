@@ -1,0 +1,91 @@
+@import ../mixins
+@import ../settings
+
+/*Slider*/
+
+.lSAction > a
+	background-image: none
+
+.property-slider-container
+	.lSAction
+		> .lSPrev,
+		> .lSNext
+			top: 0
+			margin-top: 0
+			height: 100%
+			width: 80px
+			background-size: 21px auto
+			background-repeat: no-repeat
+			opacity: 1
+			background-position: center center
+		> .lSPrev
+			left: 0
+			background-image: url(../../img/template/arrow-left.png)
+		> .lSNext
+			right: 0
+			background-image: url(../../img/template/arrow-right.png)
+
+$slider-thumbnails-arrow-width: 108px
+
+.property-slider-thumbnails-container
+	.lSSlideWrapper
+		overflow: visible
+		margin-right: $slider-thumbnails-arrow-width
+		margin-left: $slider-thumbnails-arrow-width + 15
+	.lSAction
+		> .lSPrev,
+		> .lSNext
+			position: absolute
+			top: 0
+			z-index: 1
+			display: block
+			height: 100%
+			width: $slider-thumbnails-arrow-width
+			margin-top: 0
+			background-color: rgba(0,0,0,0.6)
+			border-radius: 7px
+			background-size: 25px auto
+			background-position: center center
+			background-repeat: no-repeat
+			opacity: 1
+		> .lSPrev
+			left: -$slider-thumbnails-arrow-width - 15
+			background-image: url(../../img/template/arrow-left.png)
+		> .lSNext
+			right: -$slider-thumbnails-arrow-width
+			background-image: url(../../img/template/arrow-right.png)
+
+
+
++max639
+
+	.property-slider-container
+		.lSAction
+			> .lSPrev,
+			> .lSNext
+				top: 0
+				margin-top: 0
+				height: 100%
+				width: 40px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+

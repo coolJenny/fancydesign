@@ -1,0 +1,125 @@
+@import ../mixins
+@import ../settings
+	
+/*profile*/
+
+.cover-photo
+	&-container
+		position: relative
+		height: 320px
+		background-color: $placeholder
+		border-radius: 5px
+		overflow: hidden
+	&
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 1
+		display: block
+		// min-width: 104%
+		max-width: 1000%
+		height: 104%
+		+tf(translate(-50%, -50%))
+
+.profile-photo-name-btn
+	padding-top: 15px
+	margin-bottom: 40px
+
+.profile-photo
+	&-container
+		position: relative
+		z-index: 1
+		float: right
+		width: 295px
+		height: 273px
+		margin-top: -156px
+		background-color: $placeholder
+		margin-bottom: 30px
+		border-radius: 5px
+		overflow: hidden
+	&
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		display: block
+		width: 100%
+		height: 100%
+
+.edit-photo-icon
+	position: absolute
+	right: 0
+	bottom: 0
+	z-index: 1
+	padding: 17px
+	box-sizing: content-box
+	cursor: pointer
+	opacity: 0.9
+	+tm
+	+hf
+		opacity: 1
+
+.profile
+	&-name-position
+		margin-top: 4px
+		margin-bottom: 15px
+	&-user
+		&-name
+			margin-bottom: -5px
+			font-weight: 300
+		&-position
+			color: #42609a
+	&-btn
+		float: right
+
+
+.edit-name-icon
+	display: inline-block
+	vertical-align: middle
+	padding: 10px 11px
+	cursor: pointer
+	box-sizing: content-box
+
+.profile-edit-form
+
+
+
++max1199
+
+	.cover-photo
+		&-container
+			height: 260px
+
+	.profile-photo-name-btn
+		margin-bottom: 15px
+
+	.profile-photo
+		&-container
+			width: 240px
+			height: 220px
+			margin-top: -120px
+
++max1023
+
+	.cover-photo
+		height: 124%
+		&-container
+			height: 170px
+
+	.profile-photo
+		&-container
+			float: none
+			width: 182px
+			height: 167px
+			margin-top: -90px
+			+tf(translateX(15px))
+		&-name-btn
+			margin-bottom: 0
+
++max639
+	
+	.profile-photo-container
+		margin-bottom: 15px
+
+
+			

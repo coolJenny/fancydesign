@@ -1,0 +1,80 @@
+@import ../mixins
+@import ../settings
+
+/*page-nav*/
+
+.page-nav
+	position: relative
+	z-index: 2
+	padding-top: 9px
+	padding-bottom: 9px
+	background-color: #FFF
+	&-menu
+		+rem(14)
+		>li
+			a
+				color: inherit
+			>a
+				display: block
+				padding: 15px 0px
+			>a
+				position: relative
+				+b
+					content: ''
+					display: none
+					position: absolute
+					top: 100%
+					margin-top: -5px
+					left: 0
+					z-index: 1
+					width: 100%
+					height: 1px
+					background-color: $primary
+			+nl
+				padding-right: 40px
+			+hfa
+				color: $text-dark
+				+b
+					display: block
+
+		&.dropdown.menu>li.is-dropdown-submenu-parent>a:after
+			/*hide default dropdown arrow*/
+			display: none
+		&.dropdown.menu>li.is-dropdown-submenu-parent>a
+			/*disable default padding for dropdown arrow*/
+			padding-right: 0
+
++max1023
+
+	.page-nav
+		&-menu
+			>li
+				display: block
+				>a
+					border-bottom: rgba(0, 0, 0, 0.1) 1px solid
+					+b
+						margin-top: 0
+				+nl
+					padding-right: 0
+				>ul
+					position: static
+					border: none
+					border-radius: 0
+					>li
+						>a
+							margin-left: 15px
+							border-bottom: rgba(0, 0, 0, 0.1) 1px solid
+
+
+
+
+
+
+
+
+
+
+
+
+
+

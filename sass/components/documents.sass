@@ -1,0 +1,51 @@
+@import ../mixins
+@import ../settings
+
+
+/*Different*/
+
+.documents-list
+	padding-top: 7px
+	padding-bottom: 14px
+	margin-bottom: 0
+	margin-left: 0
+	list-style: none
+
+.document-preview
+	position: relative
+	display: block
+	padding: 10px 15px 10px 30px
+	margin-bottom: 0
+	color: $main
+	+rem(14)
+	.media-object-section
+		&:first-child
+			padding-right: 10px
+	.thumbnail
+		padding-top: 7px
+		width: 40px
+		border: none
+		box-shadow: none
+	&-title
+		margin-bottom: 3px
+	+b
+		+ct
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		height: 100%
+		width: 0
+		background-color: $primary
+		+tm
+	+hf
+		color: $main
+		+b
+			width: 2px
+
+
+
+
+
+
+

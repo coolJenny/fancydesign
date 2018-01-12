@@ -1,0 +1,121 @@
+include _mixins.pug
+
+doctype html
+// home.pug begin
+html(lang='zxx')
+	+head
+	body
+		
+		+header-absolute
+		+hero
+
+		.advantages
+			.row(data-equalizer, data-equalize-on="medium")
+				.column.xmedium-3.medium-6(data-equalizer-watch)
+					+advantage('img/template/percenthouse.svg',
+					60,
+					'Become a Real Estate Investor via Fractional Ownership',
+					'You choose among our rental properties, decide which percentage of that property to own, and your name is added to the home title.')
+				
+				.column.xmedium-3.medium-6(data-equalizer-watch)
+					+advantage("img/template/handmoney.svg",
+					60,
+					"Receive Quarterly Payouts & Earnings Statements",
+					"Transparent accessibility to costs, total earnings, and net earnings, divided amongst the property's investors on a quarterly basis.")
+				
+				.column.xmedium-3.medium-6(data-equalizer-watch)
+					+advantage("img/template/newoldhouse.svg",
+					60,
+					"Freedom to Create a Hassle-Free Real Estate Portfolio",
+					"Invest in 1 home, or diversify among multiple income properties - you have the freedom to build a unique Real Estate Investment Portfolio, without being a landlord")
+				
+				.column.xmedium-3.medium-6(data-equalizer-watch)
+					+advantage("img/template/handhouse.svg",
+					60,
+					"BitREI Invests Alongside You - We All Invest Together",
+					"BitREI will purchase at least 20% of every home listed on BitREI. This means we all invest together, providing members a piece of mind.")
+
+
+		main.box-blue
+
+			.section
+
+				.section-header
+					.row
+						.column.large-6
+							h2.section-title.filters-title Featured Property
+						.column.large-6
+							+filters-location
+
+
+				.row
+					.column
+					
+						.section
+
+							.property-item-expanded.box-white
+								.row
+									.column.large-5.large-push-7.xmedium-9.medium-10.slider-column-translated
+
+										.row
+											.column.xlarge-10.large-12.large-centered
+
+												.property-item-expanded-caption
+													+property-item-header-big
+														
+													.property-item-body
+														+property-item-characteristics
+
+									.column.large-7.large-pull-5.slider-column-translated
+										+property-slider
+
+									.column
+
+										.row
+
+											.column.large-7.slider-column-translated
+												.slider-column-translated-content
+													.property-item-progress
+														+progressbar(85)
+														+property-item-progress-values
+
+											.column.large-5.slider-column-translated
+
+												.row
+													.column.xlarge-10.large-12.medium-9.medium-centered
+
+														.property-item-footer
+															a(href="property.html").button.expanded.xregular View Details
+
+			+property-items-previews
+
+
+		.choose
+			.row
+				.column.xlarge-6.large-7.xmedium-8.medium-11.float-right
+
+					.choose-caption.box-white-no-shadow.box-padding-big.section
+						.subsection
+							.choose-header
+								h6.choose-subtitle.small Always wanted invest in real estate?
+								h3.choose-title Choose one of the hundreds of properties and buy your own part!
+							
+							.choose-body
+								p
+									| Integer elementum est congue dapibus tincidunt. Phasellus ac est eget libero tempus vestibulum et et urna. In viverra odio ac felis vulputate, nec euismod lorem congue. 
+								p
+									| Donec volutpat, risus rhoncus lobortis sagittis, arcu enim placerat risus, sed pretium felis quam nec lacus. Nam id tincidunt dui. Nullam ac purus a nisl posuere auctor elementum interdum nisi. Praesent tellus nisl, eleifend et neque quis, pretium imperdiet tellus.
+							
+							.choose-footer
+								a(href="#").button.hollow.xregular Learn More
+
+
+		+featured-in
+
+		+create-account-contact-us
+
+		+footer
+
+		+scripts
+		
+	// home.pug begin

@@ -1,0 +1,126 @@
+include _mixins.pug
+
+doctype html
+// document-vault.pug begin
+html(lang='zxx')
+	+head
+	body
+
+		+header
+		+page-nav
+
+		main.box-blue
+			.row
+				.column
+
+					.section.box-shadow.box-padding
+						h3.section-title Document Vault
+
+						form
+							.row
+								.column.large-4.medium-6
+									.section
+										h5.text-blue Select 1 or multiple properties
+
+										ul.select-multiple.menu.vertical
+											+select-multiple-item("123 E Main St., Orlando, FL 32814")
+											+select-multiple-item("225 Downing St., Orlando, FL 32814")
+											+select-multiple-item("12 Beth St., Orlando, FL 32814")
+											+select-multiple-item("123 E Main St., Orlando, FL 32814")
+											+select-multiple-item("225 Downing St., Orlando, FL 32814")
+											+select-multiple-item("12 Beth St., Orlando, FL 32814")
+											+select-multiple-item("123 E Main St., Orlando, FL 32814")
+											+select-multiple-item("225 Downing St., Orlando, FL 32814")
+											+select-multiple-item("12 Beth St., Orlando, FL 32814")
+											+select-multiple-item("123 E Main St., Orlando, FL 32814")
+											+select-multiple-item("225 Downing St., Orlando, FL 32814")
+											+select-multiple-item("12 Beth St., Orlando, FL 32814")
+
+								.column.large-4.medium-6
+									.section
+										h5.text-blue Select 1 or multiple document types
+
+										ul.select-multiple.menu.vertical
+											+select-multiple-item("Appriasals")
+											+select-multiple-item("Quarterly P&L")
+											+select-multiple-item("Quarterly Expense Report")
+											+select-multiple-item("Account Overview")
+											+select-multiple-item("Tax Documents")
+											+select-multiple-item("Titles")
+											+select-multiple-item("Ownership Contracts")
+											+select-multiple-item("Other")
+											+select-multiple-item("Quarterly Expense Report")
+											+select-multiple-item("Account Overview")
+											+select-multiple-item("Tax Documents")
+											+select-multiple-item("Titles")
+											+select-multiple-item("Quarterly Expense Report")
+											+select-multiple-item("Account Overview")
+											+select-multiple-item("Tax Documents")
+											+select-multiple-item("Titles")
+
+								.column.large-4.medium-12
+									.section
+										.text-center
+											h5.text-blue Filter by date (if applicable)
+
+											.filters-form.vertical.horizontal-medium-down.filters-form-table
+												input.filters-form-item.input-rounded(type="search" placeholder="01/01/2017")
+												label.filters-form-item.filters-label TO
+												input.filters-form-item.input-rounded(type="search" placeholder="31/03/2017")
+											
+											input(type="submit" value="Search").button.xregular
+
+
+
+					.section.box-shadow.box-padding
+						h3.section-title Search Results:
+
+						.table-column
+
+							.table-scroll
+								table.unstriped.hover
+									thead
+										tr
+											th Date Issued
+											th Property Address
+											th Document Type
+											th Description
+											th Actions
+									tbody
+										tr
+											td 01/14/2016
+											td 123 E Main St., Orlando, FL 32814
+											td Quarterly P&L Statement
+											td 2017 Q2
+											td
+												+dropdown-options(1,2,3,4)
+										tr
+											td 01/13/2016
+											td 225 Downing St., Orlando, FL 32814
+											td Quarterly Expense Report
+											td 2017 Q2
+											td
+												+dropdown-options(5,6,7,8)
+										tr
+											td 01/13/2016
+											td 12 Beth St., Orlando, FL 32814
+											td Account Overview
+											td 2017 Q2
+											td
+												+dropdown-options(9,10,11,12)
+										tr
+											td 01/13/2016
+											td 91 Mark’s St., Orlando, FL 32814
+											td Title
+											td Executed Title
+											td
+												+dropdown-options(13,14,15,16)
+						
+							+table-controls
+
+
+
+		+footer
+		+scripts
+
+	// document-vault.pug end		

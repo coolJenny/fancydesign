@@ -1,0 +1,77 @@
+include _mixins.pug
+
+doctype html
+// login-create-account.pug begin
+html(lang='zxx')
+	+head
+	body
+		
+		+header
+		
+		main.box-blue
+
+			.section
+				
+				.row
+					.column.xmedium-11.xmedium-centered
+					
+						.box-shadow.box-padding.section
+							.row(data-equalizer data-equalize-on="medium")
+							
+								.column.medium-6
+									.row
+										.column.xlarge-9.large-10.medium-11.medium-centered(data-equalizer-watch)
+											.vertical-parent
+												.vertical-middle
+
+													form.form-box.section
+														.form-header 
+															h3.light.text-center Login
+
+														.form-body
+															input(type="text" placeholder="Username or Email")
+															input(type="password" placeholder="Password")
+															.forgot-password
+																a(href="password-forgotten.html") Forgot password?
+
+														.form-footer
+															button(type="submit").button.expanded Login
+															+secure-group
+													
+
+							
+								.column.medium-6
+									.form-divider-container
+										.row
+											.column.xlarge-9.large-10.medium-11.medium-centered(data-equalizer-watch)
+												.vertical-parent
+													.vertical-middle
+
+														form.form-box.section
+
+															.form-header
+																h3.light.text-center Create An Account
+
+															.form-body
+																input(type="text" placeholder="First Name")
+																input(type="text" placeholder="Last Name")
+																input(type="email" placeholder="Email")
+																input(type="password" placeholder="Password")
+																input(type="password" placeholder="Confirm Password")
+															
+															.checkbox
+																input#checkbox-1(type="checkbox")
+																label(for="checkbox-1")
+																	span.form-text-small I have read and agree to the 
+																		a(href="#0")  Terms & Conditions
+
+															button(type="submit").button.expanded Create
+															
+										.form-divider
+
+		+footer
+
+		+scripts
+
+
+	// login-create-account.pug end

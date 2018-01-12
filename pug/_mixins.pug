@@ -1,0 +1,927 @@
+//- Pug Mixins
+
+mixin advantage(imgSrc, width, title, text)
+	// mixin advantage begin
+	.advantage.section
+		.advantage-img-container
+			img(src=imgSrc, alt="", width=width)
+		h4.advantage-title= title
+		.advantage-text
+			p= text
+	// mixin advantage end
+
+
+mixin progress-value(value, caption)
+	// progress-value mixin begin
+	.progress-value-container
+		h4.progress-value.text-blue= value
+		p.progress-value-caption= caption
+	// progress-value mixin end
+
+
+mixin property-item-progress-values
+	// mixin property-item-progress-values begin
+	.progress-values
+		+progress-value('85%','funded')
+		+progress-value('$85k','Pledged')
+		+progress-value('44','Investors')
+		+progress-value('10','Days left')
+	// mixin property-item-progress-values end
+
+
+mixin footer-nav-item(title, ...items)
+	// footer-nav-item.pug begin
+	.footer-nav-item.section
+		h6.footer-nav-item-title= title
+		.footer-nav-item-body
+			ul.menu.vertical.footer-menu
+				each item in items
+					li
+						a(href="#")= item
+	// footer-nav-item.pug end
+
+
+mixin social-list-item(imgSrc, width)
+	// social-list-item mixin begin
+	li
+		a(href="#")
+			img(src= imgSrc, width=width, alt="")
+	// social-list-item mixin end
+
+
+mixin social-list
+	// social-list mixin begin
+	ul.menu.social-list
+		+social-list-item('img/template/facebook.png', 9)
+		+social-list-item('img/template/twitter.png', 17)
+		+social-list-item('img/template/linkedin.png', 18)
+	// social-list mixin end
+
+
+mixin financial-overview-item(titleClass, value, text)
+	// financial-overview-item mixin begin
+	.financial-overview-item.box-white
+		h3.financial-overview-item-value.smaller(class=titleClass)= value
+		p.financial-overview-item-text= text
+	// financial-overview-item mixin end
+
+
+mixin form-header(title, titleMarked, titleMarkedClass)
+
+	// form-header mixin begin
+	.form-header
+		h3.light= title
+		h3.semibold(class=titleMarkedClass)= titleMarked
+	// form-header mixin begin
+
+
+mixin secure-group
+	// mixin secure-group begin
+	.secure-group-container
+		.secure-group
+			img.secure-group-img(src="img/template/lock.png" alt="" width='12')
+			h6.form-text-small 100% secure. Your e-mail stays only with us!
+	// mixin secure-group end
+
+
+mixin create-account-form(title, titleMarked, formClass)
+
+	// create-account-form mixin begin
+	form.section(class=formClass)
+		+form-header(title, titleMarked, 'text-green')
+
+		.form-body
+			input(type="email" placeholder="E-mail")
+			input(type="password" placeholder="Password")
+			input(type="password" placeholder="Confirm Password")
+			button(type="submit").button.expanded Get Started
+
+		.form-footer
+			+secure-group
+	// create-account-form mixin end
+
+mixin css(path)
+	link(rel='stylesheet', href=path)
+
+
+mixin filters-date
+	// filters-date mixin begin
+	form.filters-form
+		label.filters-form-item.filters-label filter by date
+		input.filters-form-item.input-rounded(type="text" placeholder="01/01/2017")
+		label.filters-form-item.filters-label TO
+		input.filters-form-item.input-rounded(type="text" placeholder="31/03/2017")
+	// filters-date mixin end
+
+
+mixin filters-location
+	// filters-location mixin begin
+	form.filters-form.filters-form-location
+		.row
+			.column.xlarge-5.large-5.medium-6
+				label.filters-label FILTER BY LOCATION
+			.column.xlarge-7.large-7.medium-6
+				.input-search-group
+					input.input-rounded(type="search" placeholder="Enter address or post code")
+					button(type="submit").input-search-btn
+						img(src="img/template/search.png", alt="", width="14").input-search-icon
+	// filters-location mixin end
+
+
+mixin property-item-characteristics-row(label, value, color)
+	// property-item-characteristics-row mixin begin
+	.property-item-characteristics-row
+		.row
+			.column.small-6
+				.property-item-characteristics-label= label
+			.column.small-6
+				h3.smaller.property-item-characteristics-value(class=color)= value
+	// property-item-characteristics-row mixin end
+
+
+mixin property-item-characteristics
+	// mixin property-item-characteristics begin
+	.property-item-characteristics
+		+property-item-characteristics-row('gross yield', '18.5%', 'text-blue')
+		+property-item-characteristics-row('net yield', '10.2%', 'text-green')
+		+property-item-characteristics-row('cash flow', '$4,455', 'text-blue')
+	// mixin property-item-characteristics end
+
+
+mixin property-item-price-rent(value)
+	// property-item-price-rent mixin begin
+	.property-item-price-rent
+		.property-item-price-rent-label Current Rent
+		h3.property-item-price-rent-value.smaller= value
+	// property-item-price-rent mixin end
+
+
+mixin property-item-address
+	// property-item-address mixin begin
+	address.property-item-address
+		img(src="img/template/location.png", alt="" width="11").property-item-address-icon
+		| 7143 North Street, Fond Du Lac, WI 54935
+	// property-item-address mixin end
+
+
+mixin select-multiple-item(text)
+	//  mixin select-multiple-item begin
+	li(data-toggler-itself="is-active")= text
+	//  mixin select-multiple-item end
+
+
+mixin checkbox(text, number)
+	//  mixin checkbox begin
+	.checkbox
+		input(type="checkbox", id="checkbox-" + number)
+		label(for="checkbox-" + number)= text
+	//  mixin checkbox end
+
+mixin dropdown-options(...numbers)
+	// mixin dropdown-options begin
+	//- ul.menu.dropdown.dropdown-options(data-dropdown-menu data-click-open='true' data-close-on-click-inside="false")
+	ul.menu.dropdown.dropdown-options(data-dropdown-menu data-click-open='true' data-close-on-click-inside="false" data-disable-hover="true")
+		li
+			a(href='#') Download options
+			ul.menu
+				each number in numbers
+					li
+						+checkbox('Option', number)
+	// mixin dropdown-options end
+
+
+mixin favorite-heart
+	// mixin favorite-heart begin
+	// use class .favorite-heart.is-active for active state
+	.favorite-heart(data-toggler-itself="is-active")
+		img.favorite-heart-icon-normal(src="img/template/heart-white-outline.png", alt="")
+		img.favorite-heart-icon-active(src="img/template/heart-white.png", alt="")
+	// mixin favorite-heart end
+
+
+mixin table-row-blue-green
+	// mixin table-row-blue-green begin
+	tr
+		td: b.text-blue-light 123 E Main St., Orlando, FL 32814
+		td $150,000
+		td 18%
+		td 11.75%
+		td $110,000
+		td
+			table
+				tbody
+					tr
+						td $270,000
+						td: b.text-green +25%
+	// mixin table-row-blue-green end
+
+
+mixin table-row-download
+	// mixin table-row-download begin
+	tr
+		td: time(datetime="2017-08-31") 31/08/2017
+		td Bank Transfer
+		td Payment for 26 points of 1234 E Main St, Orlando, FL 32814
+		td: a(href="#") Download
+		td $110,000
+	// mixin table-row-download end
+
+
+
+mixin callout(title, text, time)
+	// mixin callout begin
+	.callout.box-white.box-padding-sm.section(data-closable)
+		.row
+			.column
+				img.callout-close(src="img/template/close.png", alt="", data-close)
+				h4.callout-title= title
+				.callout-body
+					p= text
+				p.callout-time
+					i= time
+	// mixin callout end
+
+mixin callouts
+	// mixin callouts begin
+	.callouts-container.section
+		+callout(
+			'Sapien bibendum ultricies!',
+			'Fusce id ligula et mi ultricies tristique. Suspendisse lacinia, diam ut posuere porttitor, velit urna congue nisl.',
+			'Posted 1 hour ago')
+
+		+callout(
+			'Velit urna congue nisl, aliquet ullamcorper augue dui eget velit',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea iusto, officia libero, hic qui cumque modi dolorem consequatur cum repellat, enim amet doloribus. Perspiciatis voluptatibus sit nam ex animi quod?',
+			'Posted 17/03/2017; 5:25 PM')
+	// mixin callouts end
+
+
+mixin edit-photo
+	// mixin edit-photo begin
+	img.edit-photo-icon(src="img/template/pencil-white.png", width='25' alt="")
+	// mixin edit-photo end
+
+
+mixin property-slider-item(imgName)
+	// mixin property-slider-item begin
+	li.property-slider-item.js-property-slider-item
+		img(src="img/media/slider/" + imgName, alt="")
+	// mixin property-slider-item end
+
+
+mixin property-slider
+	// mixin property-slider begin
+	.property-slider-container.js-property-slider-container
+		ul.property-slider.js-property-slider
+			+property-slider-item("bass.jpg")
+			+property-slider-item("house.jpg")
+			+property-slider-item("light.jpg")
+			+property-slider-item("palace.jpg")
+			+property-slider-item("room.jpg")
+			+property-slider-item("shower.jpg")
+
+			+property-slider-item("bass.jpg")
+			+property-slider-item("house.jpg")
+			+property-slider-item("light.jpg")
+			+property-slider-item("palace.jpg")
+			+property-slider-item("room.jpg")
+			+property-slider-item("shower.jpg")
+		+favorite-heart
+	// mixin property-slider end
+
+
+mixin property-slider-thumbnails-item(imgName)
+	// mixin property-slider-thumbnails-item begin
+	li.property-slider-thumbnails-item.js-property-slider-thumbnails-item
+		img(src="img/media/slider/" + imgName, alt="")
+	// mixin property-slider-thumbnails-item end
+
+
+mixin property-slider-thumbnails
+	// mixin property-slider-thumbnails begin
+	.property-slider-thumbnails-container.js-property-slider-thumbnails-container
+		ul.property-slider-thumbnails.js-property-slider-thumbnails
+			+property-slider-thumbnails-item("bass.jpg")
+			+property-slider-thumbnails-item("house.jpg")
+			+property-slider-thumbnails-item("light.jpg")
+			+property-slider-thumbnails-item("palace.jpg")
+			+property-slider-thumbnails-item("room.jpg")
+			+property-slider-thumbnails-item("shower.jpg")
+
+			+property-slider-thumbnails-item("bass.jpg")
+			+property-slider-thumbnails-item("house.jpg")
+			+property-slider-thumbnails-item("light.jpg")
+			+property-slider-thumbnails-item("palace.jpg")
+			+property-slider-thumbnails-item("room.jpg")
+			+property-slider-thumbnails-item("shower.jpg")
+	// mixin property-slider-thumbnails end
+
+
+mixin progressbar(number)
+	// mixin progressbar begin
+	.progressbar
+		// change filled area with width
+		.progressbar-fill(style="width:" + number + "%")
+	// mixin progressbar end
+
+
+mixin property-item-info
+	// mixin property-item-info begin
+	p.property-item-info
+		| 3 Bedrooms,  2 Baths | 1,235 sq ft | Built in 1983
+	// mixin property-item-info end
+
+
+mixin property-item-header-big
+	// mixin property-item-header-big begin
+	.property-item-header.section
+		.property-item-price
+			h2.property-item-price-main.bigger $10,000,000
+			+property-item-price-rent('$690')
+		+property-item-address
+		+property-item-info
+	// mixin property-item-header-big end
+
+
+mixin property-item-header-small
+	// mixin property-item-header-small begin
+	.property-item-header
+			.property-item-container
+				.property-item-price
+					h2.property-item-price-main $10,000,000
+					+property-item-price-rent('$790')
+				+property-item-address
+	// mixin property-item-header-small end
+
+
+
+
+mixin scripts
+	// mixins scripts begin
+
+	// jQuery
+	script(src='js/jquery-2.2.1.min.js')
+
+	// Framework
+	script(src='foundation/foundation.min.js')
+
+	// Slider
+	script(src='lightslider/lightslider.min.js')
+
+	// Chart
+	script(src='chart/chart.min.js')
+
+	// Custom script
+	script(src='js/main.js')
+
+	// mixins scripts end
+
+
+mixin property-items-previews
+	// mixin property-items-previews begin
+
+	.property-items-previews.section(data-equalizer, data-equalize-on='medium')
+		.row
+			.column.xlarge-12.large-10.xmedium-12.medium-8.medium-centered
+				.row
+					.columns.xlarge-4.large-6.xmedium-6
+						+property-item-rented
+
+					.columns.xlarge-4.large-6.xmedium-6
+						+property-item-preview
+
+					.columns.xlarge-4.large-6.xmedium-6
+						+property-item-preview
+
+					.columns.xlarge-4.large-6.xmedium-6
+						+property-item-preview
+
+					.columns.xlarge-4.large-6.xmedium-6
+						+property-item-preview
+
+					.columns.xlarge-4.large-6.xmedium-6
+						+property-item-preview
+
+		+load-more
+
+	// mixn property-items-previews end
+
+
+
+mixin property-item-preview
+
+	// mixin property-item-preview begin
+	.property-item.box-white(data-equalizer-watch)
+
+		+property-item-header-small
+
+		.property-item-img-container
+			img(src="img/media/property-item/paradise.jpg", alt="").property-item-img
+			.property-item-img-content
+
+				+favorite-heart
+
+				.property-item-img-footer
+					.property-item-img-footer-rooms.column.small-6
+						p 3 Bedrooms
+						p 2 Baths
+					.property-item-img-footer-foots.column.small-6
+						p 1,235 sq ft
+
+		.property-item-body
+			.property-item-container
+				+property-item-characteristics
+
+				.property-item-progress
+					+progressbar(85)
+					+property-item-progress-values
+
+		.property-item-footer
+			.property-item-container
+				a(href="property.html").button.xregular.hollow.expanded View Details
+
+	// mixin property-item-preview end
+
+mixin property-item-rented
+
+		// mixin property-item-rented begin
+		.property-item.box-white
+
+			.property-item-img-container
+				img(src="img/media/property-item/paradise.jpg", alt="").property-item-img
+				.property-item-img-content
+
+					+favorite-heart
+
+					.property-item-img-footer
+						.property-item-img-footer-rooms.column.small-6
+							p 3 Bedrooms
+							p 2 Baths
+						.property-item-img-footer-foots.column.small-6
+							p 1,235 sq ft
+
+			.property-item-body
+				.property-item-container
+					+property-item-characteristics
+
+					.property-item-progress
+						+progressbar(85)
+						+property-item-progress-values
+
+			.property-item-footer
+				.property-item-container
+					a(href="property.html").button.xregular.hollow.expanded View Details
+
+		// mixin property-item-rented end
+
+mixin create-account-contact-us
+
+	// mixin create-account-contact-us begin
+	.create-account-contact-us.box-white-no-shadow
+		.row(data-equalizer data-equalize-on="medium")
+
+			.column.medium-6
+
+				.row
+					.column.xlarge-6.large-7.medium-11.medium-centered(data-equalizer-watch)
+						.vertical-parent
+							.vertical-middle
+
+								+create-account-form(
+									'Are You Interested?',
+									'Open an Account!',
+									'create-account-form')
+
+			.column.medium-6
+
+				.form-container
+
+					.row
+						.column.medium-11.medium-centered.large-float-right(data-equalizer-watch)
+							.vertical-parent
+								.vertical-middle
+
+									form.contact-form.section
+										+form-header(
+											'Do You Have Any Questions?',
+											'Contact Us!',
+											'text-blue')
+
+										.form-body
+											.row
+												.column.large-6
+													input(type="text" placeholder="Your Name")
+													input(type="email" placeholder="E-mail")
+
+												.column.large-6
+													textarea.input-height-2(placeholder="Your message")
+
+										.form-footer
+											button(type="submit").button.hollow.expanded Send
+					.form-divider
+	// mixin create-account-contact-us end
+
+
+mixin profile-menu
+	// mixin profile-menu begin
+
+	ul.menu.vertical.profile-menu.box-shadow.section
+		li.is-active: a(href="profile.html") My Profile
+		li: a(href="password-reset.html") Password Reset
+		li: a(href="permissions.html") Permissions
+	// mixin profile-menu end
+
+
+mixin page-nav
+	// mixin page-nav begin
+
+	// Collapsible Menu
+	.page-nav
+		.row
+			.column
+				// Menu button
+				.menu-icon-container.clearfix(data-responsive-toggle="page-nav-menu" data-hide-for="large")
+					button.menu-icon.inverse(type="button", data-toggle="page-nav-menu")
+
+				ul.menu.page-nav-menu.dropdown#page-nav-menu(data-dropdown-menu data-click-open='true')
+					li: a(href='portfolios.html') Portfolios
+					li: a(href='watchlist.html') Watch List
+					li: a(href='transaction-history.html') Transaction History
+					li.is-active: a(href='document-vault.html') Document Vault
+					li
+						a(href='#')
+							| Profile
+							img(src="img/template/arrow-down.png", alt="" width='8').icon-right
+						ul.menu
+							li: a(href="profile.html") My Profile
+							li: a(href="password-reset.html") Password Reset
+							li: a(href="permissions.html") Permissions
+	// mixin page-nav end
+
+
+mixin featured-in
+	// featured-in begin
+	.featured-in
+		.row
+			.column
+				h5.featured-in-title As featured in
+				.featured-in-items
+					img.featured-in-item.section(src="img/media/featured-in/wall-street.png", alt="" width='140')
+					img.featured-in-item.section(src="img/media/featured-in/forbes.png", alt="" width='150')
+					img.featured-in-item.section(src="img/media/featured-in/huffington.png", alt="" width='187')
+	// featured-in end
+
+
+mixin financial-overview
+	// financial-overview begin
+	.section
+
+		.section-header
+			.row
+				.column.xlarge-6.large-5
+					h3.section-title.filters-title Portfolio Financial Overview
+				.column.xlarge-6.large-7
+					+filters-date
+
+		.row
+			.column.large-6
+				.table-scroll
+					.financial-overview-chart.box-white.section
+						canvas#financial-overview-chart
+
+			.column.large-6
+				.row.row-compact
+					.column.medium-4.small-6
+						+financial-overview-item('text-green','+15%','Property value change since 2016')
+					.column.medium-4.small-6
+						+financial-overview-item('text-green','99%','Average Occupancy Rate')
+					.column.medium-4.small-6
+						+financial-overview-item('text-black','5','New investors in last month')
+					.column.medium-4.small-6
+						+financial-overview-item('text-black','44','BitREI Investors')
+					.column.medium-4.small-6
+						+financial-overview-item('text-green','$55k','Earned by all people')
+					.column.medium-4.small-6
+						+financial-overview-item('text-black','$52,500','Funds invested since January')
+	// financial-overview end
+
+mixin footer
+	// mixin footer begin
+	footer.footer
+
+		.footer-nav
+			.row
+				.column.large-3.medium-4
+					+footer-nav-item('QUICK MENU', 'Buy Properties', 'About Us', 'Knowledge')
+				.column.large-3.medium-4
+					+footer-nav-item('HELP','News','Our History','Ranking of properties','FAQ')
+				.column.large-3.medium-4
+					+footer-nav-item('USER menu','Pellentesque leo','Etiam orci','Quis consequat et','Nunc pharetra interdum')
+				.column.large-3
+					.footer-nav-item.section
+						h6.footer-nav-item-title about us
+						.footer-nav-item-body
+							p Donec tempor pellentesque risus, eget pharetra augue tristique rhoncus. Praesent nec felis arc.
+							p Donec rhoncus nec justo nec finibus. Mauris aliquam metus dolor, vel placerat dolor.
+
+		.footer-main
+			.row
+				.column
+					.footer-main-header
+						.row
+							.column.small-6
+								a.footer-logo(href="home.html")
+									img(src="img/template/footer-logo.png", alt="" width="82")
+							.column.small-6
+								.footer-social-login
+									+social-list
+									// hidden for small - it is represented in header
+									a(href="login-create-account.html").button.tiny.footer-btn.hide-for-small-only Login
+
+					.footer-main-text
+						.row
+							.column.large-2
+								p This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only,
+							.column.large-8
+								p This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances. This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances. This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances.
+							.column.large-2
+								p This website is operated and maintained by Betterment LLC, an SEC Registered Investment Advisor. Terms & Legal Privacy Policy Trademark. How Betterment calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only,
+	// mixin footer end
+
+
+mixin head
+	// mixin head begin
+	head
+		// Meta
+		meta(charset='utf-8')
+
+		// Title
+		title BitREI
+
+		// Viewport
+		meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=3.0, user-scalable=yes')
+
+		// Fonts
+		link(href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet")
+
+		// Framework
+		link(rel='stylesheet', href='foundation/foundation.min.css')
+
+		// Slider
+		link(rel='stylesheet', href='lightslider/lightslider.css')
+
+		// CSS
+		+css('css/global/global.css')
+		+css('css/components/advantages.css')
+		+css('css/components/choose.css')
+		+css('css/components/comments.css')
+		+css('css/components/documents.css')
+		+css('css/components/featured-in.css')
+		+css('css/components/filters.css')
+		+css('css/components/financial-overview.css')
+		+css('css/components/footer.css')
+		+css('css/components/header.css')
+		+css('css/components/hero.css')
+		+css('css/components/page-nav.css')
+		+css('css/components/profile-menu.css')
+		+css('css/components/profile.css')
+		+css('css/components/property-item.css')
+		+css('css/components/slider.css')
+
+
+		// Favicon
+		link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+		link(rel='manifest', href='/manifest.json')
+		link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
+		meta(name='theme-color', content='#ffffff')
+	// mixin head end
+
+
+mixin header-logo
+	// mixin header-logo begin
+	a.header-logo(href="home.html")
+		img(src="img/template/header-logo.png" width="105", alt="")
+	// mixin header-logo end
+
+
+mixin hero
+	// mixin hero begin
+	.hero
+		.hero-body
+			.row
+				.column.xlarge-11.xlarge-centered
+
+					.row(data-equalizer data-equalize-on="medium")
+
+						.columns.xlarge-6.large-7.xmedium-7(data-equalizer-watch)
+							.vertical-parent
+								.vertical-middle
+
+									.hero-text.section
+										.hero-text-body
+											h1.hero-title Fractional Real Estate Investing for Anyone
+											h2.hero-subtitle Investing in residential rental properties without buying the whole house! How?
+
+										.hero-text-footer
+											a(href="#").hero-btn
+												img.hero-btn-item.hero-btn-icon(src="img/template/play.png" alt="")
+												h3.hero-btn-item.hero-btn-text Watch Video
+
+						.columns.xlarge-4.large-4.xmedium-5.medium-7.medium-centered.xmedium-uncentered(data-equalizer-watch)
+							.vertical-parent
+								.vertical-middle
+
+									.box-white.box-padding.section
+										+create-account-form(
+											'Create a',
+											'Free Account!',
+											'create-account-form')
+	// mixin hero end
+
+
+
+mixin header-menu-logged
+	// mixin header-menu-logged begin
+	.header-menu-user-container
+
+		ul.menu.header-menu-user-logged-container.dropdown(data-dropdown-menu data-click-open='true')
+			li
+				a(href='#').header-menu-user-logged
+					.header-menu-user-photo-container
+						.header-menu-user-badge.badge.primary 2
+						img.header-menu-user-photo(src="img/media/comments/photo-1.jpg", alt="")
+
+					.header-menu-user-name-position
+						h6.header-menu-user-name Michael McKensey
+						h6.header-menu-user-position.small Level 1 Investor
+
+				ul.menu
+					li: a(href="#") Link
+					li: a(href="#") Link
+					li: a(href="#") Link
+					li: a(href="#") Link
+	// mixin header-menu-logged end
+
+
+
+mixin header-menu-main
+	// mixin header-menu-main begin
+	.menu-centered
+		ul.header-menu.menu.dropdown(data-dropdown-menu data-click-open='true')
+			li: a(href='#') Buy Properties
+			li: a(href='#') About Us
+			li
+				a(href='#') Knowledge
+				ul.menu
+					li: a(href="#") Link
+					li: a(href="#") Link
+					li: a(href="#") Link
+					li: a(href="#") Link
+
+	// mixin header-menu-main end
+
+
+mixin header-menu-button
+	// mixin header-menu-button begin
+	// Menu button
+	.menu-icon-container.clearfix(data-responsive-toggle="header-menu" data-hide-for="large", data-toggle="header")
+		button.menu-icon(type="button", data-toggle="header-menu")
+	// mixin header-menu-button end
+
+mixin header
+	// mixin header begin
+	header.header
+		.row
+			.column.large-2
+				.row
+					.column.large-12.small-6
+						+header-logo
+					.column.small-6
+						+header-menu-button
+
+			.column.large-10
+
+				// Collapsible Menu
+				.header-menu-collapsible#header-menu
+					.row
+						.column.large-8
+							+header-menu-main
+
+						.column.large-4
+							+header-menu-unlogged
+
+	// mixin header end
+
+
+mixin header-absolute
+	// mixin header-absolute begin
+	header.header.header-absolute#header(data-toggler=".is-active")
+
+		.row
+			.column.large-2
+				.row
+					.column.large-12.small-6
+						+header-logo
+					.column.small-6
+						+header-menu-button
+
+			.column.large-10
+
+				// Collapsible Menu
+				.header-menu-collapsible#header-menu
+					.row
+						.column.large-8
+							+header-menu-main
+
+						.column.large-4
+							+header-menu-unlogged
+
+	// mixin header-absolute end
+
+
+
+mixin header-logged
+	// mixin header-logged begin
+	header.header
+		.row
+			.column.large-2
+				.row
+					.column.large-12.small-6
+						+header-logo
+					.column.small-6
+						+header-menu-button
+
+			.column.large-10
+
+				// Collapsible Menu
+				.header-menu-collapsible#header-menu
+					.row
+						.column.large-8
+							+header-menu-main
+
+						.column.large-4
+							+header-menu-logged
+	// mixin header-logged end
+
+
+mixin header-menu-unlogged
+	// mixin header-menu-unlogged begin
+	.header-menu-unlogged-container
+		a(href="login-create-account.html").header-menu-user-item.button.hollow.on-dark.tiny SIGN UP
+		span.header-menu-user-item or
+		a(href="login-create-account.html").header-menu-user-item.header-menu-user-link-login login
+	// mixin header-menu-unlogged end
+
+
+mixin load-more
+	// mixin load-more begin
+	.row
+		.column.medium-4.medium-centered
+			.load-more.section
+				a(href="#").button.hollow.secondary.xregular.expanded Load More
+	// mixin load-more end
+
+
+mixin comment(img, name, text)
+	// mixin comment begin
+	.comment
+		.comment-user
+			img.comment-user-photo(src="img/media/comments/" + img, alt="")
+			h6.comment-user-name= name
+
+		.comment-main
+			.comment-body
+				blockquote
+					p= text
+
+			.comment-footer
+				.row
+					.column.medium-6
+						time.comment-time(datetime="2017-08-31 14:35") 31/08/2017; 2:35 PM
+					.column.medium-6
+						.comment-btn-container
+							a(href="#").button.secondary.xtiny Reply
+	// mixin comment end
+
+
+mixin document-preview(img, width, title, text)
+	// mixin document-preview begin
+	a.media-object.document-preview(href="#")
+		.media-object-section
+			.thumbnail
+				img(src="img/template/" + img, alt="", width=width)
+
+		.media-object-section
+			h5.document-preview-title= title
+			p= text
+	// mixin document-preview end
+
+
+mixin table-controls
+	// mixin table-controls begin
+	.table-controls
+		a(href="#0").button.hollow.disabled Prev
+		a(href="#0").button.hollow Next
+	// mixin table-controls end

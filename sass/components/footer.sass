@@ -1,0 +1,67 @@
+@import ../mixins
+@import ../settings
+
+/*footer*/
+
+.footer
+	+rem(14)
+	&-nav
+		padding-top: 50px
+		padding-bottom: 18px
+		color: $light-blue
+		background-color: #f2f6f9
+		&-item
+			&-title
+				margin-bottom: 23px
+				color: $gray-middle
+				text-transform: uppercase
+			&-body
+	&-menu
+		>li
+			>a
+				display: block
+				padding: 0 0 10px 0
+				color: inherit
+				+hf
+					text-decoration: underline
+	&-main
+		background-color: #FFF
+		color: $gray-light
+		&-header
+			padding-top: 27px
+			padding-bottom: 10px
+			border-bottom: #c7d2da 1px solid
+	&-logo
+		+in
+		padding-top: 5px
+		padding-bottom: 5px
+		margin-bottom: 15px
+	&-social-login
+		text-align: right
+	&-main-text
+		padding-top: 40px
+		padding-bottom: 40px
+	.social-list
+		margin-right: 5px
+
+
++max639
+
+	.footer
+		&-nav
+			padding-top: 30px
+			&-item
+				&-title
+					margin-bottom: 13px
+		&-logo
+			margin-bottom: 5px
+		&-main
+			&-header
+				padding-top: 15px
+			&-text
+				padding-top: 30px
+
+
+
+
+

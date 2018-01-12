@@ -1,0 +1,73 @@
+/*dropdown*/
+
+.is-dropdown-submenu
+	min-width: 100%
+	// border-top: none
+	border-color: $border
+	color: $main
+	+rb(4)
+	>li
+		>a
+			position: relative
+			display: block
+			+nw
+			+b
+				+ct
+				position: absolute
+				top: 0
+				left: -1px
+				z-index: 1
+				width: 0
+				height: 100%
+				background-color: $primary
+				+tm
+			+hf
+				color: $link-hover
+				+b
+					width: 2px
+.dropdown
+	&-options
+		+in
+		background-color: #fff
+		+nw
+		>li
+			display: block
+			a
+				color: inherit
+			>a
+				position: relative
+				display: block
+				padding-top: 5px
+				padding-bottom: 5px
+				border: $border 2px solid
+				border-radius: 4px
+				color: $main
+				+b
+					+ct
+					position: absolute
+					top: 0
+					right: 0
+					z-index: 0
+					height: 100%
+					width: 30px
+					background-color: #eff3f6
+					border-left: $border 2px solid
+				+a
+					z-index: 0
+		.is-dropdown-submenu
+			min-width: 100%
+			padding: 5px 15px
+		&.menu
+			>li.is-dropdown-submenu-parent
+				>a
+					padding-right: 45px
+					+a
+						border-top-color: $text-dark
+
+
+
+
+
+
+
+	
